@@ -1,0 +1,2747 @@
+<!DOCTYPE html><html><head><title>Welcome to Mr  blog</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<h1 id="welcome-to-mr-blog">Welcome to Mr  blog</h1>
+
+
+
+<hr>
+
+
+
+<p><img src="static/logo.png" alt="mr" title=""></p>
+
+
+
+<hr>
+
+
+
+<h2 id="面试宝典">面试宝典</h2>
+
+
+
+<h3 id="java基础">java基础</h3>
+
+<hr>
+
+
+
+<h5 id="1jdk-和-jre-有什么区别">1..JDK 和 JRE 有什么区别？</h5>
+
+<p>Jdk主要是java的工具包和类库，jre主要是jvm和核心类库 </p>
+
+<hr>
+
+<h5 id="2-和-equals-的区别是什么">2. == 和 equals 的区别是什么？</h5>
+
+<p>==是对比引用地址，equals对比值是否相同 </p>
+
+<hr>
+
+<h5 id="3-两个对象的-hashcode相同则-equals也一定为-true对吗">3. 两个对象的 hashCode()相同，则 equals()也一定为 true，对吗？</h5>
+
+<p>equals和hashcode是有设计要求的，equals相等，则hashcode一定相等，反之则不然 </p>
+
+<hr>
+
+
+
+<h5 id="4-final-在-java-中有什么作用">4. final 在 java 中有什么作用？</h5>
+
+<p>(1)修饰类：表示该类不能被继承； </p>
+
+<p>(2)修饰方法：表示方法不能被重写； </p>
+
+<p>(3)修饰变量：表示变量只能一次赋值以后值不能被修改（常量） </p>
+
+<hr>
+
+
+
+<h5 id="5-java-中的-mathround-15-等于多少">5. java 中的 Math.round(-1.5) 等于多少？</h5>
+
+<p>-1。四舍五入的原理是在参数上加0.5然后做向下取整。 </p>
+
+<hr>
+
+
+
+<h5 id="6-string-属于基础的数据类型吗">6. String 属于基础的数据类型吗？</h5>
+
+<p> String类是不可变的,对String类的任何改变,都是返回一个新的String类对象 </p>
+
+<hr>
+
+
+
+<h5 id="7-java-中操作字符串都有哪些类它们之间有什么区别">7. java 中操作字符串都有哪些类？它们之间有什么区别？</h5>
+
+<p>String : final修饰，String类的方法都是返回new String。即对String对象的任何改变都不影响到原对象，对字符串的修改操作都会生成新的对象。 </p>
+
+<p>StringBuffer : 对字符串的操作的方法都加了synchronized，保证线程安全。 </p>
+
+<p>StringBuilder : 不保证线程安全，在方法体内需要进行字符串的修改操作，可以new StringBuilder对象，调用StringBuilder对象的append、replace、delete等方法修改字符串。 </p>
+
+<hr>
+
+
+
+<h5 id="8-string-stri与-string-strnew-stringi一样吗">8. String str=”i”与 String str=new String(“i”)一样吗？</h5>
+
+<p>为什么会输出上边的结果呢，String x = “张三” 的方式，Java 虚拟机会将其分配到常量池中，而常量池中没有重复的元素，比如当执行“张三”时，java虚拟机会先在常量池中检索是否已经有“张三”,如果有那么就将“张三”的地址赋给变量，如果没有就创建一个，然后在赋给变量；而 String z = new String(“张三”) 则会被分到堆内存中，即使内容一样还是会创建新的对象。 </p>
+
+<hr>
+
+
+
+<h5 id="10-string-类的常用方法都有那些">10. String 类的常用方法都有那些？</h5>
+
+<p>length indexOf substring 转换大小写 </p>
+
+<hr>
+
+
+
+<h5 id="11-抽象类必须要有抽象方法吗">11. 抽象类必须要有抽象方法吗？</h5>
+
+<p>不一定 </p>
+
+<hr>
+
+
+
+<h5 id="12-普通类和抽象类有哪些区别">12. 普通类和抽象类有哪些区别？</h5>
+
+<p>1.使用abstract修饰 </p>
+
+<p>2.抽象方法不能有方法实体 </p>
+
+<p>3.抽象类被继承，必须重写他的所有方法 </p>
+
+<hr>
+
+
+
+<h5 id="13-抽象类能使用-final-修饰吗">13. 抽象类能使用 final 修饰吗？</h5>
+
+<p>不能，被final 修饰不能继承 </p>
+
+<hr>
+
+
+
+<h5 id="14-接口和抽象类有什么区别">14. 接口和抽象类有什么区别？</h5>
+
+<p>1.实现方式不一样 </p>
+
+<p>2.都不能直接实例化 </p>
+
+<hr>
+
+
+
+<h5 id="15-java-中-io-流分为几种">15. java 中 IO 流分为几种？</h5>
+
+<p>按照流的流向分，可以分为输入流和输出流； </p>
+
+<p>输入流是相对程序而言的，外部传入数据给程序需要借助输入流。 </p>
+
+<p>输出流是相对程序而言的，程序把数据传输到外部需要借助输出流。 </p>
+
+<p>•按照操作单元划分，可以划分为字节流和字符流； </p>
+
+<p>字符流–传输过程中，传输数据的最基本单位是字符的流。 </p>
+
+<p>字节流–传输过程中，传输数据的最基本单位是字节的流。 </p>
+
+<hr>
+
+
+
+<h5 id="16-bionioaio-有什么区别">16. BIO、NIO、AIO 有什么区别？</h5>
+
+<p>BIO (Blocking I/O): 同步阻塞I/O模式，数据的读取写入必须阻塞在一个线程内等待其完成。在活动连接数不是特别高（小于单机1000）的情况下，这种模型是比较不错的，可以让每一个连接专注于自己的 I/O 并且编程模型简单，也不用过多考虑系统的过载、限流等问题。线程池本身就是一个天然的漏斗，可以缓冲一些系统处理不了的连接或请求。但是，当面对十万甚至百万级连接的时候，传统的 BIO 模型是无能为力的。因此，我们需要一种更高效的 I/O 处理模型来应对更高的并发量。  </p>
+
+<p>NIO (New I/O): NIO是一种同步非阻塞的I/O模型，在Java 1.4 中引入了NIO框架，对应 java.nio 包，提供了 Channel , Selector，Buffer等抽象。NIO中的N可以理解为Non-blocking，不单纯是New。它支持面向缓冲的，基于通道的I/O操作方法。 NIO提供了与传统BIO模型中的 Socket 和 ServerSocket 相对应的 SocketChannel 和 ServerSocketChannel 两种不同的套接字通道实现,两种通道都支持阻塞和非阻塞两种模式。阻塞模式使用就像传统中的支持一样，比较简单，但是性能和可靠性都不好；非阻塞模式正好与之相反。对于低负载、低并发的应用程序，可以使用同步阻塞I/O来提升开发速率和更好的维护性；对于高负载、高并发的（网络）应用，应使用 NIO 的非阻塞模式来开发  </p>
+
+<p>AIO (Asynchronous I/O): AIO 也就是 NIO 2。在 Java 7 中引入了 NIO 的改进版 NIO 2,它是异步非阻塞的IO模型。异步 IO 是基于事件和回调机制实现的，也就是应用操作之后会直接返回，不会堵塞在那里，当后台处理完成，操作系统会通知相应的线程进行后续的操作。AIO 是异步IO的缩写，虽然 NIO 在网络操作中，提供了非阻塞的方法，但是 NIO 的 IO 行为还是同步的。对于 NIO 来说，我们的业务线程是在 IO 操作准备好时，得到通知，接着就由这个线程自行进行 IO 操作，IO操作本身是同步的 </p>
+
+<hr>
+
+
+
+<h5 id="17-files的常用方法都有哪些">17. Files的常用方法都有哪些？</h5>
+
+<p>Files.exists() 检测文件路径是否存在 </p>
+
+<p>Files.createFile()创建文件 </p>
+
+<p>Files.createDirectory()创建文件夹 </p>
+
+<p>Files.delete() 删除文件或者目录 </p>
+
+<p>Files.copy() 复制文件 </p>
+
+<p>Files.move() 移动文件 </p>
+
+<p>Files.size（）查看文件个数 </p>
+
+<p>Files.read() 读取文件 </p>
+
+<p>Files.write()写入文件 </p>
+
+<hr>
+
+
+
+<h3 id="容器">容器</h3>
+
+<hr>
+
+
+
+<h5 id="java-容器都有哪些">java 容器都有哪些？</h5>
+
+<p>Collection 和 Collections 有什么区别？ </p>
+
+<p>Collection是集合接口Collections是集合工具类，不能实例化，如排序 </p>
+
+<hr>
+
+
+
+<h5 id="listsetmap-之间的区别是什么">List、Set、Map 之间的区别是什么？</h5>
+
+<p>List允许重复（有序），set不允许重复（无序），map键值队列（无序），不允许重复 </p>
+
+<p>① List：ArrayList、LinkedList； </p>
+
+<p>② Set：HashSet、LinkedHashSet、TreeSet、SortedSet等等； </p>
+
+<p>③ Map：HashMap、TreeMap、WeakHashMap、LinkedHashMap、IdentityHashMap等等； </p>
+
+<hr>
+
+
+
+<h5 id="hashmap-和-hashtable-有什么区别">HashMap 和 Hashtable 有什么区别？</h5>
+
+<p>HashTable的方法是synchronized(线程安全的)，而HashMap不是，在多个线程访问HashTable时，不需要自己为它的方法实现同步，而HashMap就必须为之提供外同步。 </p>
+
+<hr>
+
+
+
+<h5 id="如何决定使用-hashmap-还是-treemap">如何决定使用 HashMap 还是 TreeMap？</h5>
+
+<p>TreeMap&lt;K,V&gt;的Key值是要求实现java.lang.Comparable，所以迭代的时候TreeMap默认是按照Key值升序排列的；TreeMap的实现也是基于红黑树结构。 </p>
+
+<p>而HashMap&lt;K,V&gt;的Key值实现散列hashCode()，分布是散列的均匀的，不支持排序，数据结构主要是桶（数组），链表或红黑树。 </p>
+
+<p>所以，查询的时候使用HashMap，增加、快速创建的时候使用TreeMap </p>
+
+<hr>
+
+
+
+<h5 id="说一下-hashmap-的实现原理">说一下 HashMap 的实现原理？</h5>
+
+<p>我们通过put()和get()方法储存和获取对象。当我们将键值对传递给put()方法时，它调用键对象的hashCode()方法来计算hashcode，让后找到bucket位置来储存值对象。当获取对象时，通过键对象的equals()方法找到正确的键值对，然后返回值对象。HashMap使用链表来解决碰撞问题，当发生碰撞了，对象将会储存在链表的下一个节点中。 HashMap在每个链表节点中储存键值对对象。 </p>
+
+<hr>
+
+
+
+<h5 id="说一下-hashset-的实现原理">说一下 HashSet 的实现原理？</h5>
+
+<p>HashSet是基于HashMap实现的，HashSet 底层使用HashMap来保存所有元素，  <br>
+因此HashSet 的实现比较简单，相关HashSet 的操作，基本上都是直接调用底层HashMap的相关方法来完成，HashSet不允许有重复的值，并且元素是无序的。 </p>
+
+<hr>
+
+
+
+<h5 id="arraylist-和-linkedlist-的区别是什么">ArrayList 和 LinkedList 的区别是什么？</h5>
+
+<ol><li rel="1"><p>是否保证线程安全： ArrayList 和 LinkedList 都是不同步的，也就是不保证线程安全； </p></li>
+<li rel="2"><p>底层数据结构： Arraylist 底层使用的是Object数组；LinkedList 底层使用的是双向链表数据结构（JDK1.6之前为循环链表，JDK1.7取消了循环。注意双向链表和双向循环链表的区别，下面有介绍到！） </p></li>
+<li rel="3"><p>插入和删除是否受元素位置的影响： ① ArrayList 采用数组存储，所以插入和删除元素的时间复杂度受元素位置的影响。 比如：执行add(E e)方法的时候， ArrayList 会默认在将指定的元素追加到此列表的末尾，这种情况时间复杂度就是O(1)。但是如果要在指定位置 i 插入和删除元素的话（add(int index, E element)）时间复杂度就为 O(n-i)。因为在进行上述操作的时候集合中第 i 和第 i 个元素之后的(n-i)个元素都要执行向后位/向前移一位的操作。 ② LinkedList 采用链表存储，所以插入，删除元素时间复杂度不受元素位置的影响，都是近似 O（1）而数组为近似 O（n）。 </p></li>
+<li rel="4"><p>是否支持快速随机访问： LinkedList 不支持高效的随机元素访问，而 ArrayList 支持。快速随机访问就是通过元素的序号快速获取元素对象(对应于get(int index)方法)。 </p></li>
+<li rel="5"><p>内存空间占用： ArrayList的空 间浪费主要体现在在list列表的结尾会预留一定的容量空间，而LinkedList的空间花费则体现在它的每一个元素都需要消耗比ArrayList更多的空间（因为要存放直接后继和直接前驱以及数据） </p></li>
+</ol>
+
+<hr>
+
+
+
+<h5 id="如何实现数组和-list-之间的转换">如何实现数组和 List 之间的转换？</h5>
+
+<p>循环 </p>
+
+<p>数组调用as.list </p>
+
+<hr>
+
+<h5 id="arraylist-和-vector-的区别是什么">ArrayList 和 Vector 的区别是什么？</h5>
+
+<p>（1）同步性：Vector是线程安全的，用synchronized实现线程安全，而ArrayList是线程不安全的，如果只有一个线程会访问到集合，那最好使用ArrayList，因为它不考虑线程安全，效率会高些；如果有多个线程会访问到集合，那最好是使用Vector，因为不需要我们再去考虑和编写线程安全的代码。 </p>
+
+<p>（2）数据容量增长：二者都有一个初始容量大小，采用线性连续存储空间，当存储的元素的个数超过了容量时，就需要增加二者的存储空间，Vector增长原来的一倍，ArrayList增加原来的0.5倍。 </p>
+
+<hr>
+
+
+
+<h5 id="array-和-arraylist-有何区别">Array 和 ArrayList 有何区别？</h5>
+
+<p>Array可以包含基本类型和对象类型，ArrayList只能包含对象类型。  <br>
+Array大小是固定的，ArrayList的大小是动态变化的。 </p>
+
+<hr>
+
+
+
+<h5 id="在-queue-中-poll和-remove有什么区别">在 Queue 中 poll()和 remove()有什么区别？</h5>
+
+<hr>
+
+
+
+<h5 id="1offer和add的区别">1、offer()和add()的区别</h5>
+
+<p>add()和offer()都是向队列中添加一个元素。但是如果想在一个满的队列中加入一个新元素，调用 add() 方法就会抛出一个 unchecked 异常，而调用 offer() 方法会返回 false。可以据此在程序中进行有效的判断！ </p>
+
+<hr>
+
+
+
+<h5 id="2peek和element的区别">2、peek()和element()的区别</h5>
+
+<p>peek()和element()都将在不移除的情况下返回队头，但是peek()方法在队列为空时返回null，调用element()方法会抛出NoSuchElementException异常。 </p>
+
+<hr>
+
+
+
+<h5 id="3poll和remove的区别">3、poll()和remove()的区别</h5>
+
+<p>poll()和remove()都将移除并且返回对头，但是在poll()在队列为空时返回null，而remove()会抛出NoSuchElementException异常 </p>
+
+<hr>
+
+
+
+<h5 id="哪些集合类是线程安全的">哪些集合类是线程安全的？</h5>
+
+<p>Vector：就比Arraylist多了个同步化机制（线程安全）。 </p>
+
+<p>Hashtable：就比Hashmap多了个线程安全。 </p>
+
+<p>ConcurrentHashMap:是一种高效但是线程安全的集合。 </p>
+
+<p>Stack：栈，也是线程安全的，继承于Vector。 </p>
+
+<hr>
+
+
+
+<h5 id="迭代器-iterator-是什么">迭代器 Iterator 是什么？</h5>
+
+<p>迭代器是一种设计模式，它是一个对象，它可以遍历并选择序列中的对象， </p>
+
+<hr>
+
+
+
+<h5 id="iterator-怎么使用有什么特点">Iterator 怎么使用？有什么特点？</h5>
+
+<p>集合调用Iterator ，转换成Iterator对象循环通过next获取对象 </p>
+
+<hr>
+
+
+
+<h5 id="iterator-和-listiterator-有什么区别">Iterator 和 ListIterator 有什么区别？</h5>
+
+<p>使用范围不同，Iterator可以迭代所有集合；ListIterator 只能用于List及其子类 </p>
+
+<p>ListIterator 有 add 方法，可以向 List 中添加对象；Iterator 不能 </p>
+
+<p>ListIterator 有 hasPrevious() 和 previous() 方法，可以实现逆向遍历；Iterator不可以 </p>
+
+<p>ListIterator 有 nextIndex() 和previousIndex() 方法，可定位当前索引的位置；Iterator不可以 </p>
+
+<p>ListIterator 有 set()方法，可以实现对 List 的修改；Iterator 仅能遍历，不能修改 </p>
+
+<hr>
+
+
+
+<h5 id="怎么确保一个集合不能被修改">怎么确保一个集合不能被修改？</h5>
+
+<p>Collections. unmodifiableCollection </p>
+
+<hr>
+
+
+
+<h3 id="多线程">多线程</h3>
+
+<hr>
+
+
+
+<h5 id="并行和并发有什么区别">并行和并发有什么区别？</h5>
+
+<p>解释一:并行是指两个或者多个事件在同一时刻发生;而并发是指两个或多个事件在同一时间间隔发生。 </p>
+
+<p>•解释二:并行是在不同实体上的多个事件,并发是在同一实体上的多个事件。 </p>
+
+<p>•解释三:在一台处理器上“同时”处理多个任务,在多台处理器上同时处理多个任务。如hadoop分布式集群 </p>
+
+<hr>
+
+
+
+<h5 id="线程和进程的区别">线程和进程的区别？</h5>
+
+<hr>
+
+
+
+<h5 id="守护线程是什么">守护线程是什么？</h5>
+
+<p>1、守护线程，专门用于服务其他的线程，如果其他的线程（即用户自定义线程）都执行完毕，连main线程也执行完毕，那么jvm就会退出（即停止运行）——此时，连jvm都停止运行了，守护线程当然也就停止执行了。 </p>
+
+<p>2、再换一种说法，如果有用户自定义线程存在的话，jvm就不会退出——此时，守护线程也不能退出，也就是它还要运行，干嘛呢，就是为了执行垃圾回收的任务啊。 </p>
+
+<p>3、守护线程又被称为“服务进程”“精灵线程”“后台线程”，是指在程序运行是在后台提供一种通用的线程，这种线程并不属于程序不可或缺的部分。 通俗点讲，任何一个守护线程都是整个JVM中所有非守护线程的“保姆”。 </p>
+
+<hr>
+
+
+
+<h5 id="创建线程有哪几种方式">创建线程有哪几种方式？</h5>
+
+<p>首先继承Thread方法，重写Thread的run()方法 </p>
+
+<p>使用Runnable接口与继承Thread类的用法相似 </p>
+
+<p>是实现Callable接口和Future创建线程 </p>
+
+<hr>
+
+
+
+<h5 id="说一下-runnable-和-callable-有什么区别">说一下 runnable 和 callable 有什么区别？</h5>
+
+<p>相同点： </p>
+
+<p>两者都是接口；（废话） </p>
+
+<p>两者都可用来编写多线程程序； </p>
+
+<p>两者都需要调用Thread.start()启动线程； </p>
+
+<p>不同点： </p>
+
+<p>两者最大的不同点是：实现Callable接口的任务线程能返回执行结果；而实现Runnable接口的任务线程不能返回结果； </p>
+
+<p>Callable接口的call()方法允许抛出异常；而Runnable接口的run()方法的异常只能在内部消化，不能继续上抛； </p>
+
+<p>注意点： </p>
+
+<p>Callable接口支持返回执行结果，此时需要调用FutureTask.get()方法实现，此方法会阻塞主线程直到获取‘将来’结果；当不调用此方法时，主线程不会阻塞！ </p>
+
+<hr>
+
+
+
+<h5 id="线程有哪些状态">线程有哪些状态？</h5>
+
+<p>1. 新建(NEW)：新创建了一个线程对象。 </p>
+
+<p>2. 可运行(RUNNABLE)：线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获取cpu 的使用权 。 </p>
+
+<p>3. 运行(RUNNING)：可运行状态(runnable)的线程获得了cpu 时间片（timeslice） ，执行程序代码。  <br>
+4. 阻塞(BLOCKED)：阻塞状态是指线程因为某种原因放弃了cpu 使用权，也即让出了cpu timeslice，暂时停止运行。直到线程进入可运行(runnable)状态，才有机会再次获得cpu timeslice 转到运行(running)状态。阻塞的情况分三种：  </p>
+
+<p>(一). 等待阻塞：运行(running)的线程执行o.wait()方法，JVM会把该线程放入等待队列(waitting queue)中。  <br>
+(二). 同步阻塞：运行(running)的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则JVM会把该线程放入锁池(lock pool)中。  <br>
+(三). 其他阻塞：运行(running)的线程执行Thread.sleep(long ms)或t.join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入可运行(runnable)状态。 </p>
+
+<hr>
+
+
+
+<h5 id="5-死亡dead线程runmain-方法执行结束或者因异常退出了run方法则该线程结束生命周期死亡的线程不可再次复生">5. 死亡(DEAD)：线程run()、main() 方法执行结束，或者因异常退出了run()方法，则该线程结束生命周期。死亡的线程不可再次复生。</h5>
+
+<hr>
+
+
+
+<h5 id="sleep-和-wait-有什么区别">sleep() 和 wait() 有什么区别？</h5>
+
+<p>对于sleep()方法，我们首先要知道该方法是属于Thread类中的。而wait()方法，则是属于Object类中的。 </p>
+
+<p>sleep()方法导致了程序暂停执行指定的时间，让出cpu该其他线程，但是他的监控状态依然保持者，当指定的时间到了又会自动恢复运行状态。 </p>
+
+<p>。 </p>
+
+<p>wait()是Object类的方法，当一个线程执行到wait方法时，它就进入到一个和该对象相关的等待池，同时释放对象的机锁，使得其他线程能够访问，可以通过notify，notifyAll方法来唤醒等待的线程 </p>
+
+<hr>
+
+
+
+<h5 id="notify和-notifyall有什么区别">notify()和 notifyAll()有什么区别？</h5>
+
+<p>先解释两个概念。 </p>
+
+<p>等待池：假设一个线程A调用了某个对象的wait()方法，线程A就会释放该对象的锁后，进入到了该对象的等待池，等待池中的线程不会去竞争该对象的锁。 </p>
+
+<p>锁池：只有获取了对象的锁，线程才能执行对象的 synchronized 代码，对象的锁每次只有一个线程可以获得，其他线程只能在锁池中等待 </p>
+
+<p>区别： </p>
+
+<p>notify() 方法随机唤醒对象的等待池中的一个线程，进入锁池；notifyAll() 唤醒对象的等待池中的所有线程，进入锁池。 </p>
+
+<p>线程的 run()和 start()有什么区别？ </p>
+
+<p>调用 start() 方法是用来启动线程的，轮到该线程执行时，会自动调用 run()；直接调用 run() 方法，无法达到启动多线程的目的，相当于主线程线性执行 Thread 对象的 run() 方法。 </p>
+
+<p>一个线程对线的 start() 方法只能调用一次，多次调用会抛出 java.lang.IllegalThreadStateException 异常；run() 方法没有限制。 </p>
+
+<hr>
+
+
+
+<h5 id="创建线程池有哪几种方式">创建线程池有哪几种方式？</h5>
+
+<p>newCachedThreadPool创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。  <br>
+newFixedThreadPool 创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。  <br>
+newScheduledThreadPool 创建一个定长线程池，支持定时及周期性任务执行。  <br>
+newSingleThreadExecutor 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。 </p>
+
+<hr>
+
+<h5 id="线程池都有哪些状态">线程池都有哪些状态？</h5>
+
+<ol><li rel="1"><p>RUNNING：线程池一旦被创建，就处于 RUNNING 状态，任务数为 0，能够接收新任务，对已排队的任务进行处理。 </p></li>
+<li rel="2"><p>SHUTDOWN：不接收新任务，但能处理已排队的任务。调用线程池的 shutdown() 方法，线程池由 RUNNING 转变为 SHUTDOWN 状态。 </p></li>
+<li rel="3"><p>STOP：不接收新任务，不处理已排队的任务，并且会中断正在处理的任务。调用线程池的 shutdownNow() 方法，线程池由(RUNNING 或 SHUTDOWN ) 转变为 STOP 状态。 </p></li>
+<li rel="4"><p>TIDYING： </p></li>
+</ol>
+
+<p>SHUTDOWN 状态下，任务数为 0， 其他所有任务已终止，线程池会变为 TIDYING 状态，会执行 terminated() 方法。线程池中的 terminated() 方法是空实现，可以重写该方法进行相应的处理。 </p>
+
+<p>线程池在 SHUTDOWN 状态，任务队列为空且执行中任务为空，线程池就会由 SHUTDOWN 转变为 TIDYING 状态。 </p>
+
+<p>线程池在 STOP 状态，线程池中执行中任务为空时，就会由 STOP 转变为 TIDYING 状态。 </p>
+
+<ol start="5"><li rel="5"><p>TERMINATED：线程池彻底终止。线程池在 TIDYING 状态执行完 terminated() 方法就会由 TIDYING 转变为 TERMINATED 状态。 </p></li>
+</ol>
+
+<hr>
+
+
+
+<h5 id="线程池中-submit和-execute方法有什么区别">线程池中 submit()和 execute()方法有什么区别？</h5>
+
+<p>1、接收的参数不一样 </p>
+
+<p>2、submit有返回值，而execute没有 </p>
+
+<p>用到返回值的例子，比如说我有很多个做validation的task，我希望所有的task执行完，然后每个task告诉我它的执行结果，是成功还是失败，如果是失败，原因是什么。  <br>
+然后我就可以把所有失败的原因综合起来发给调用者。 </p>
+
+<p>个人觉得cancel execution这个用处不大，很少有需要去取消执行的。 </p>
+
+<p>而最大的用处应该是第二点。  <br>
+3、submit方便Exception处理  <br>
+意思就是如果你在你的task里会抛出checked或者unchecked exception，  <br>
+而你又希望外面的调用者能够感知这些exception并做出及时的处理，那么就需要用到submit，通过捕获Future.get抛出的异常。 </p>
+
+<hr>
+
+
+
+<h5 id="在-java-程序中怎么保证多线程的运行安全">在 java 程序中怎么保证多线程的运行安全？</h5>
+
+<p>线程的安全性问题体现在： </p>
+
+<p>原子性：一个或者多个操作在 CPU 执行的过程中不被中断的特性 </p>
+
+<p>可见性：一个线程对共享变量的修改，另外一个线程能够立刻看到 </p>
+
+<p>有序性：程序执行的顺序按照代码的先后顺序执行 </p>
+
+<p>导致原因： </p>
+
+<p>缓存导致的可见性问题 </p>
+
+<p>线程切换带来的原子性问题 </p>
+
+<p>编译优化带来的有序性问题 </p>
+
+<p>解决办法： </p>
+
+<p>JDK Atomic开头的原子类、synchronized、LOCK，可以解决原子性问题 </p>
+
+<p>synchronized、volatile、LOCK，可以解决可见性问题 </p>
+
+<p>Happens-Before 规则可以解决有序性问题 </p>
+
+<p>多线程锁的升级原理是什么？ </p>
+
+<p>锁分级别原因： </p>
+
+<p>没有优化以前，sychronized是重量级锁（悲观锁），使用 wait 和 notify、notifyAll 来切换线程状态非常消耗系统资源；线程的挂起和唤醒间隔很短暂，这样很浪费资源，影响性能。所以 JVM 对 sychronized 关键字进行了优化，把锁分为 无锁、偏向锁、轻量级锁、重量级锁 状态。 </p>
+
+<p>无锁：没有对资源进行锁定，所有的线程都能访问并修改同一个资源，但同时只有一个线程能修改成功，其他修改失败的线程会不断重试直到修改成功。  </p>
+
+<p>偏向锁：对象的代码一直被同一线程执行，不存在多个线程竞争，该线程在后续的执行中自动获取锁，降低获取锁带来的性能开销。偏向锁，指的就是偏向第一个加锁线程，该线程是不会主动释放偏向锁的，只有当其他线程尝试竞争偏向锁才会被释放。 </p>
+
+<p>偏向锁的撤销，需要在某个时间点上没有字节码正在执行时，先暂停拥有偏向锁的线程，然后判断锁对象是否处于被锁定状态。如果线程不处于活动状态，则将对象头设置成无锁状态，并撤销偏向锁； </p>
+
+<p>如果线程处于活动状态，升级为轻量级锁的状态。 </p>
+
+<p>轻量级锁：轻量级锁是指当锁是偏向锁的时候，被第二个线程 B 所访问，此时偏向锁就会升级为轻量级锁，线程 B 会通过自旋的形式尝试获取锁，线程不会阻塞，从而提高性能。 </p>
+
+<p>当前只有一个等待线程，则该线程将通过自旋进行等待。但是当自旋超过一定的次数时，轻量级锁便会升级为重量级锁；当一个线程已持有锁，另一个线程在自旋，而此时又有第三个线程来访时，轻量级锁也会升级为重量级锁。 </p>
+
+<p>重量级锁：指当有一个线程获取锁之后，其余所有等待获取该锁的线程都会处于阻塞状态。 </p>
+
+<p>重量级锁通过对象内部的监视器（monitor）实现，而其中 monitor 的本质是依赖于底层操作系统的 Mutex Lock 实现，操作系统实现线程之间的切换需要从用户态切换到内核态，切换成本非常高。 </p>
+
+<hr>
+
+
+
+<h5 id="什么是死锁">什么是死锁？</h5>
+
+<p>死锁是指两个或两个以上的进程在执行过程中，由于竞争资源或者由于彼此通信而造成的一种阻塞的现象，若无外力作用，它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁，这些永远在互相等待的进程称为死锁进程。 </p>
+
+<hr>
+
+
+
+<h5 id="怎么防止死锁">怎么防止死锁？</h5>
+
+<p>A:java 死锁产生的四个必要条件 </p>
+
+<p>1、互斥使用，即当资源被一个线程使用(占有)时，别的线程不能使用 </p>
+
+<p>2、不可抢占，资源请求者不能强制从资源占有者手中夺取资源，资源只能由资源占有者主动释放。 </p>
+
+<p>3、请求和保持，即当资源请求者在请求其他的资源的同时保持对原有资源的占有。 </p>
+
+<p>4、循环等待，即存在一个等待队列：P1占有P2的资源，P2占有P3的资源，P3占有P1的资源。这样就形成了一个等待环路。 </p>
+
+<p>A：死锁预防 </p>
+
+<p>理解了死锁的原因，尤其是产生死锁的四个必要条件，就可以最大可能地避免、预防和解除死锁。只要打破四个必要条件之一就能有效预防死锁的发生：打破互斥条件：改造独占性资源为虚拟资源，大部分资源已无法改造。打破不可抢占条件：当一进程占有一独占性资源后又申请一独占性资源而无法满足，则退出原占有的资源。打破占有且申请条件：采用资源预先分配策略，即进程运行前申请全部资源，满足则运行，不然就等待，这样就不会占有且申请。打破循环等待条件：实现资源有序分配策略，对所有设备实现分类编号，所有进程只能采用按序号递增的形式申请资源。 [3] </p>
+
+<p>所以，在系统设计、进程调度等方面注意如何不让这四个必要条件成立，如何确定资源的合理分配算法，避免进程永久占据系统资源。此外，也要防止进程在处于等待状态的情况下占用资源,在系统运行过程中，对进程发出的每一个系统能够满足的资源申请进行动态检查，并根据检查结果决定是否分配资源，若分配后系统可能发生死锁，则不予分配，否则予以分配。因此，对资源的分配要给予合理的规划。 </p>
+
+<p>下面几种方法可用以避免重装死锁的发生： </p>
+
+<p>①允许目的节点将不完整的报文递交给目的端系统； </p>
+
+<p>②一个不能完整重装的报文能被检测出来，并要求发送该报文的源端系统重新传送； </p>
+
+<p>③为每个节点配备一个后备缓冲空间，用以暂存不完整的报文。 </p>
+
+<p>①、②两种方法不能很满意地解决重装死锁，因为它们使端系统中的协议复杂化了。一般的设计中，网络层应该对端系统透明，也即端系统不该考虑诸如报文拆、装之类的事。③方法虽然不涉及端系统,但使每个节点增加了开销。 </p>
+
+<p>ThreadLocal 是什么？有哪些使用场景？ </p>
+
+<p>ThreadLocal 是线程本地存储，在每个线程中都创建了一个 ThreadLocalMap 对象，每个线程可以访问自己内部 ThreadLocalMap 对象内的 value。 </p>
+
+<p>经典的使用场景是为每个线程分配一个 JDBC 连接 Connection。这样就可以保证每个线程的都在各自的 Connection 上进行数据库的操作，不会出现 A 线程关了 B线程正在使用的 Connection； 还有 Session 管理 等问题。 </p>
+
+<hr>
+
+
+
+<h5 id="说一下-synchronized-底层实现原理">说一下 synchronized 底层实现原理？</h5>
+
+<p>前言 </p>
+
+<p>前两篇文章，我们聊了聊线程/进程的概念，接着简单串了一下同步的方式方法。今天我们就单拎出来synchronized，好好捋一捋它的前世今生。 </p>
+
+<p>正文 </p>
+
+<p>小A：咱们前几天铺垫了这么多内容，今天是不是要好好的深挖一下原理的内容了？ </p>
+
+<p>MDove：没错，接下来。我会从常见的synchronized加锁方式入手；引出Java对象在内存的布局，以及锁的存放位置；然后看一看锁在C++中的简单实现思路；最后咱们从字节码中，看一下JVM如果识别synchronized。内容不是很难，不会涉及到特别多深奥的内容，大部分是平铺直叙的介绍，很适合阅读呦~ </p>
+
+<p>小A：快点开始吧，我等不及啦。 </p>
+
+<p>浅聊synchronized的使用 </p>
+
+<p>MDove：说起synchronized的底层实现原来，咱们先看看synchronized的俩种加锁方式： </p>
+
+<p>1、某个对象实例内 </p>
+
+<p>此作用域内的synchronized锁 ，可以防止多个线程同时访问这个对象的synchronized方法 </p>
+
+<p>并且一个对象有多个synchronized方法，只要一个线程访问了其中的一个synchronized方法，其它线程不能同时访问这个对象中任何一个synchronized方法。 </p>
+
+<p>此外，不同对象实例的synchronized方法是不相干预的。也就是说，其它线程可以同时访问此类下的另一个对象实例中的synchronized方法； </p>
+
+<p>2、某个类 </p>
+
+<p>此作用域下，可以防止多个线程同时访问这个类中的synchronized方法。也就是说此种修饰，可以对此类的所有对象实例起作用。 </p>
+
+<p>MDove：注意一点，synchronized关键字是不能继承的，也就是说，基类的方法synchronized fun(){} 在继承类中并不自动是synchronized fun(){}，而是变成了fun(){}。继承时，需要显式的指定它的某个方法为synchronized方法。有机会你可以自己写个demo试一下。 </p>
+
+<p>常见错误 </p>
+
+<p>MDove：你来看一看下面这个demo，有没有什么问题？ </p>
+
+<p>小A：没觉得有问题呐？这不就是第一种加锁的方式，锁实例对象么？ </p>
+
+<p>MDove：既然你都知道是锁实例对象，那你没看出来问题么？虽然我们使用synchronized修饰了add()。但是却new了两个不同的实例对象，这也就意味着存在着两个不同的实例对象锁，因此t1和t2都会进入各自的对象锁，也就是说t1和t2线程使用的是不同的锁，因此线程安全是无法保证的。 </p>
+
+<p>小A：对对对，没错。那解决这种问题，是不是需要用第二种加锁的方式，锁住这个类？ </p>
+
+<p>MDove：没错，解决这种困境的的方式是将synchronized作用于静态的add方法，这样的话，对象锁就当前类，因为类对象只有一个，因此无论new多少个实例对象都是安全的： </p>
+
+<p>小A：那是不是这样改写就可以了？ </p>
+
+<p>MDove：没错就是这样，很简单。接下来让我们看一些深入的内容，锁的实现。 </p>
+
+<p>synchronized锁的底层实现 </p>
+
+<p>MDove：我们都知道，对象被创建在堆中。并且对象在内存中的存储布局方式可以分为3块区域：对象头、实例数据、对齐填充。其中对象头，便是我们今天的主角。 </p>
+
+<p>关于实例数据、对齐填充的作用，各位小伙伴可以参考《深入理解Java虚拟机》。 </p>
+
+<p>MDove：对于对象头来说，主要是包括俩部分信息： </p>
+
+<p>1、自身运行时的数据，比如：锁状态标志、线程持有的锁…等等。（此部分内容被称之为Mark Word） </p>
+
+<p>今天我们只聊：指向重量级锁的指针 </p>
+
+<p>2、另一部分是类型指针：JVM通过这个指针来确定这个对象是哪个类的实例。 </p>
+
+<p>MDove：今天我们主要聊的是对象头，第一部分中重量级锁的内容。 </p>
+
+<p>MDove：先让我们从宏观的角度看一看synchronized锁的实现原理。 </p>
+
+<p>synchronized锁的宏观实现 </p>
+
+<p>MDove：synchronized的对象锁，其指针指向的是一个monitor对象（由C++实现）的起始地址。每个对象实例都会有一个 monitor。其中monitor可以与对象一起创建、销毁；亦或者当线程试图获取对象锁时自动生成。 </p>
+
+<p>monitor是由ObjectMonitor实现（ObjectMonitor.hpp文件，C++实现的），对于我们来说主要关注的是如下代码： </p>
+
+<p>MDove：我们可以看到这里定义了_WaitSet 和 _EntryList俩个队列，其中_WaitSet 用来保存每个等待锁的线程对象。 </p>
+
+<p>小A：那_EntryList呢？ </p>
+
+<p>MDove：别着急，让我们先看一下_owner，它指向持有ObjectMonitor对象的线程。当多个线程同时访问一段同步代码时，会先存放到 _EntryList 集合中，接下来当线程获取到对象的monitor时，就会把_owner变量设置为当前线程。同时count变量+1。如果线程调用wait() 方法，就会释放当前持有的monitor，那么_owner变量就会被置为null，同时_count减1，并且该线程进入 WaitSet集合中，等待下一次被唤醒。 </p>
+
+<p>MDove：当然，若当前线程顺利执行完方法，也将释放monitor，重走一遍刚才的内容，也就是_owner变量就会被置为null，同时_count减1，并且该线程进入 WaitSet集合中，等待下一次被唤醒。 </p>
+
+<p>因为这个锁对象存放在对象本身，也就是为什么Java中任意对象可以作为锁的原因。 </p>
+
+<p>synchronized代码块的底层实现 </p>
+
+<p>MDove：咱们先写一个简单的demo，然后看一下它们的字节码： </p>
+
+<p>MDove：根据虚拟机规范要求，在执行monitorenter指令时，首先要尝试获取对象锁，也就是上文我们提到了monitor对象。如果这个对象没有被锁定，或者当前线程已经拥有了这个对象的锁，那么就把锁的计数器（_count）加1。当然与之对应执行monitorexit指令时，锁的计数器（_count）也会减1。 </p>
+
+<p>MDove：如果当前线程获取锁失败，那么就会被阻塞住，进入_WaitSet 中，等待锁被释放为止。 </p>
+
+<p>小A：等等，我看到字节码中，有俩个monitorexit指令，这是为什么呢？ </p>
+
+<p>MDove：是这样的，编译器需要确保方法中调用过的每条monitorenter指令都要执行对应的monitorexit 指令。为了保证在方法异常时，monitorenter和monitorexit指令也能正常配对执行，编译器会自动产生一个异常处理器，它的目的就是用来执行 异常的monitorexit指令。而字节码中多出的monitorexit指令，就是异常结束时，被执行用来释放monitor的。 </p>
+
+<p>小A：我们刚才看的是同步代码块的原理，那么直接修饰在方法上呢？也是通过这个俩个指令吗？ </p>
+
+<p>MDove：你别说，还真不是： </p>
+
+<p>MDove：可以看到：字节码中并没有monitorenter指令和monitorexit指令，取得代之的是ACC_SYNCHRONIZED标识，JVM通过ACC_SYNCHRONIZED标识，就可以知道这是一个需要同步的方法，进而执行上述同步的过程，也就是_count加1，这些过程。 </p>
+
+<p>小A：哦，原来是这样。一个是用了指令，一个是用的标识呀~对了，我听说synchronized的性能特别低是这样么？ </p>
+
+<p>MDove：这句话不全对，JDK1.5后对synchronized进行了大刀阔斧的优化，这其中涉及到偏向锁、轻量级锁、自旋锁、锁消除等手段。时候也不早了，这些内容今天就不展开了。有机会我们下次再学习吧~ </p>
+
+<p>synchronized 和 volatile 的区别是什么？ </p>
+
+<p>synchronized关键字解决的是执行控制的问题，它会阻止其它线程获取当前对象的监控锁，这样就使得当前对象中被synchronized关键字保护的代码块无法被其它线程访问，也就无法并发执行。更重要的是，synchronized还会创建一个内存屏障，内存屏障指令保证了所有CPU操作结果都会直接刷到主存中，从而保证了操作的内存可见性，同时也使得先获得这个锁的线程的所有操作，都happens-before于随后获得这个锁的线程的操作。 </p>
+
+<p>volatile关键字解决的是内存可见性的问题，会使得所有对volatile变量的读写都会直接刷到主存，即保证了变量的可见性。这样就能满足一些对变量可见性有要求而对读取顺序没有要求的需求。 </p>
+
+<hr>
+
+
+
+<h5 id="synchronized-和-lock-有什么区别">synchronized 和 Lock 有什么区别？</h5>
+
+<p>1.首先synchronized是java内置关键字，在jvm层面，Lock是个java类； </p>
+
+<p>2.synchronized无法判断是否获取锁的状态，Lock可以判断是否获取到锁； </p>
+
+<p>3.synchronized会自动释放锁(a 线程执行完同步代码会释放锁 ；b 线程执行过程中发生异常会释放锁)，Lock需在finally中手工释放锁（unlock()方法释放锁），否则容易造成线程死锁； </p>
+
+<p>4.用synchronized关键字的两个线程1和线程2，如果当前线程1获得锁，线程2线程等待。如果线程1阻塞，线程2则会一直等待下去，而Lock锁就不一定会等待下去，如果尝试获取不到锁，线程可以不用一直等待就结束了； </p>
+
+<p>5.synchronized的锁可重入、不可中断、非公平，而Lock锁可重入、可判断、可公平（两者皆可） </p>
+
+<p>6.Lock锁适合大量同步的代码的同步问题，synchronized锁适合代码少量的同步问题。 </p>
+
+<p>synchronized 和 ReentrantLock 区别是什么？ </p>
+
+<p>synchronized 竞争锁时会一直等待；ReentrantLock 可以尝试获取锁，并得到获取结果 </p>
+
+<p>synchronized 获取锁无法设置超时；ReentrantLock 可以设置获取锁的超时时间 </p>
+
+<p>synchronized 无法实现公平锁；ReentrantLock 可以满足公平锁，即先等待先获取到锁 </p>
+
+<p>synchronized 控制等待和唤醒需要结合加锁对象的 wait() 和 notify()、notifyAll()；ReentrantLock 控制等待和唤醒需要结合 Condition 的 await() 和 signal()、signalAll() 方法 </p>
+
+<p>synchronized 是 JVM 层面实现的；ReentrantLock 是 JDK 代码层面实现 </p>
+
+<p>synchronized 在加锁代码块执行完或者出现异常，自动释放锁；ReentrantLock 不会自动释放锁，需要在 finally{} 代码块显示释放 </p>
+
+<hr>
+
+
+
+<h5 id="说一下-atomic-的原理">说一下 atomic 的原理？</h5>
+
+<p>反射 </p>
+
+<hr>
+
+
+
+<h5 id="什么是反射">什么是反射？</h5>
+
+<p>在Java运行时环境中，对于任意一个类，能否知道这个类有哪些属性和方法？对于任意一个对象，能否调用它的任意一个方法 </p>
+
+<p>Java反射机制主要提供了以下功能： </p>
+
+<p>　* 1.在运行时判断任意一个对象所属的类。 </p>
+
+<p>　* 2.在运行时构造任意一个类的对象。 </p>
+
+<p>　* 3.在运行时判断任意一个类所具有的成员变量和方法。 </p>
+
+<p>　* 4.在运行时调用任意一个对象的方法。  </p>
+
+<hr>
+
+
+
+<h5 id="什么是-java-序列化什么情况下需要序列化">什么是 java 序列化？什么情况下需要序列化？</h5>
+
+<p>序列化：将 Java 对象转换成字节流的过程。 </p>
+
+<p>反序列化：将字节流转换成 Java 对象的过程。 </p>
+
+<p>当 Java 对象需要在网络上传输 或者 持久化存储到文件中时，就需要对 Java 对象进行序列化处理。 </p>
+
+<p>序列化的实现：类实现 Serializable 接口，这个接口没有需要实现的方法。实现 Serializable 接口是为了告诉 jvm 这个类的对象可以被序列化。 </p>
+
+<p>注意事项： </p>
+
+<p>某个类可以被序列化，则其子类也可以被序列化 </p>
+
+<p>声明为 static 和 transient 的成员变量，不能被序列化。static 成员变量是描述类级别的属性，transient 表示临时数据 </p>
+
+<p>反序列化读取序列化对象的顺序要保持一致 </p>
+
+<p>动态代理是什么？有哪些应用？ </p>
+
+<p>动态代理：在运行时，创建目标类，可以调用和扩展目标类的方法。 </p>
+
+<p>Java 中实现动态的方式：JDK 中的动态代理 和 Java类库 CGLib。 </p>
+
+<hr>
+
+
+
+<h5 id="怎么实现动态代理">怎么实现动态代理？</h5>
+
+<hr>
+
+
+
+<h5 id="对象拷贝">对象拷贝</h5>
+
+<hr>
+
+<h5 id="为什么要使用克隆">为什么要使用克隆？</h5>
+
+<p>想对一个对象进行处理，又想保留原有的数据进行接下来的操作，就需要克隆了。克隆分浅克隆和深克隆，浅克隆后的对象中非基本对象和原对象指向同一块内存，因此对这些非基本对象的修改会同时更改克隆前后的对象。深克隆可以实现完全的克隆，可以用反射的方式或序列化的方式实现。 </p>
+
+<hr>
+
+
+
+<h5 id="如何实现对象克隆">如何实现对象克隆？</h5>
+
+<p>  1). 实现Cloneable接口并重写Object类中的clone()方法；  <br>
+  2). 实现Serializable接口，通过对象的序列化和反序列化实现克隆，可以实现真正的深度克隆，代码如下: </p>
+
+<hr>
+
+
+
+<h5 id="深拷贝和浅拷贝区别是什么">深拷贝和浅拷贝区别是什么？</h5>
+
+<p>复制一个 Java 对象  <br>
+浅拷贝：复制基本类型的属性；引用类型的属性复制，复制栈中的变量 和 变量指向堆内存中的对象的指针，不复制堆内存中的对象。 </p>
+
+<p>深拷贝：复制基本类型的属性；引用类型的属性复制，复制栈中的变量 和 变量指向堆内存中的对象的指针和堆内存中的对象。 </p>
+
+<p>Java Web </p>
+
+<hr>
+
+
+
+<h5 id="jsp-和-servlet-有什么区别">jsp 和 servlet 有什么区别？</h5>
+
+<p>ervlet： </p>
+
+<p>Servlet 是一种服务器端的Java应用程序，具有独立于平台和协议的特性，可以生成动态的Web页面。它担当客户请求（Web浏览器或其他HTTP客户程序）与服务器响应（HTTP服务器上的数据库或应用程序）的中间层。 Servlet是位于Web服务器内部的服务器端的Java应用程序，与传统的从命令行启动的Java应用程序不同，Servlet由Web服务器进行加载，该Web服务器必须包含支持Servlet的Java虚拟机。 </p>
+
+<p>Jsp： </p>
+
+<p>JSP 全名为Java Server Pages，中文名叫java服务器页面，其根本是一个简化的Servlet设计。JSP技术使用Java编程语言编写类XML的tags和scriptlets，来封装产生动态网页的处理逻辑。网页还能通过tags和scriptlets访问存在于服务端的资源的应用逻辑。JSP将网页逻辑与网页设计的显示分离，支持可重用的基于组件的设计，使基于Web的应用程序的开发变得迅速和容易。 JSP(JavaServer Pages)是一种动态页面技术，它的主要目的是将表示逻辑从Servlet中分离出来。 </p>
+
+<p>相同点 </p>
+
+<p>jsp经编译后就变成了servlet，jsp本质就是servlet，jvm只能识别java的类，不能识别jsp代码，web容器将jsp的代码编译成jvm能够识别的java类。 </p>
+
+<hr>
+
+
+
+<h5 id="jsp-有哪些内置对象作用分别是什么">jsp 有哪些内置对象？作用分别是什么？</h5>
+
+<p>JSP共有以下9个内置的对象： </p>
+
+<p>request 用户端请求，此请求会包含来自GET/POST请求的参数 </p>
+
+<p>response 网页传回用户端的回应 </p>
+
+<p>pageContext 网页的属性是在这里管理 </p>
+
+<p>session 与请求有关的会话期 </p>
+
+<p>application servlet 正在执行的内容 </p>
+
+<p>out 用来传送回应的输出 </p>
+
+<p>config servlet的构架部件 </p>
+
+<p>page JSP网页本身 </p>
+
+<p>exception 针对错误网页，未捕捉的例外 </p>
+
+<p>request表示HttpServletRequest对象。它包含了有关浏览器请求的信息，并且提供了几个用于获取cookie, header,和session数据的有用的方法。 </p>
+
+<p>response表示HttpServletResponse对象，并提供了几个用于设置送回浏览器的响应的方法（如cookies,头信息等） </p>
+
+<p>out对象是javax.jsp.JspWriter的一个实例，并提供了几个方法使你能用于向浏览器回送输出结果。 </p>
+
+<p>pageContext表示一个javax.servlet.jsp.PageContext对象。它是用于方便存取各种范围的名字空间、servlet相关的对象的API，并且包装了通用的 </p>
+
+<p>servlet相关功能的方法。 </p>
+
+<p>session表示一个请求的javax.servlet.http.HttpSession对象。Session可以存贮用户的状态信息 </p>
+
+<p>applicaton 表示一个javax.servle.ServletContext对象。这有助于查找有关servlet引擎和servlet环境的信息 </p>
+
+<p>config表示一个javax.servlet.ServletConfig对象。该对象用于存取servlet实例的初始化参数。 </p>
+
+<p>page表示从该页面产生的一个servlet实例 </p>
+
+<hr>
+
+
+
+<h5 id="说一下-jsp-的-4-种作用域">说一下 jsp 的 4 种作用域？</h5>
+
+<p>application 作用域 </p>
+
+<p>     如果把变量放到application里，就说明它的作用域是application，它的有效范围是整个应用。 整个应用是指从应用启动，到应用结束。我们没有说“从服务器启动，到服务器关闭”，是因为一个服务器可能部署多个应用，当然你关闭了服务器，就会把上面所有的应用都关闭了。 application作用域里的变量，它们的存活时间是最长的，如果不进行手工删除，它们就一直可以使用。 </p>
+
+<p>application作用域上的信息传递是通过ServletContext实现的，它提供的主要方法如下所示： </p>
+
+<p>Object getAttribute（String name）  //从application中获取信息； </p>
+
+<p>void setAttribute（String name, Object value）  //向application作用域中设置信息。 </p>
+
+<p>session作用域 </p>
+
+<p>       session作用域比较容易理解，同一浏览器对服务器进行多次访问，在这多次访问之间传递信息，就是session作用域的体现。如果把变量放到session里，就说明它的作用域是session，它的有效范围是当前会话。所谓当前会话，就是指从用户打开浏览器开始，到用户关闭浏览器这中间的过程。这个过程可能包含多个请求响应。也就是说，只要用户不关浏览器，服务器就有办法知道这些请求是一个人发起的，整个过程被称为一个会话（session），而放到会话中的变量，就可以在当前会话的所有请求里使用。   <br>
+ session是通过HttpSession接口实现的，它提供的主要方法如下所示： </p>
+
+<p>Object HttpSession.getAttribute（String name） //从session中获取信息。 </p>
+
+<p>void HttpSession.setAttribute（String name, Object value）//向session中保存信息。 </p>
+
+<p>HttpSession HttpServletRequest.getSessio() //获取当前请求所在的session的对象。 </p>
+
+<p> session的开始时刻比较容易判断，它从浏览器发出第一个HTTP请求即可认为会话开始。但结束时刻就不好判断了，因为浏览器关闭时并不会通知服务器，所以只能通过如下这种方法判断：如果一定的时间内客户端没有反应，则认为会话结束。Tomcat的默认值为120分钟，但这个值也可以通过HttpSession的setMaxInactiveInterval()方法来设置： </p>
+
+<p>void setMaxInactiveInterval(int interval) </p>
+
+<p>如果想主动让会话结束，例如用户单击“注销”按钮的时候，可以使用 HttpSession 的 invalidate()方法，用于强制结束当前session：void invalidate() </p>
+
+<p>request作用域 </p>
+
+<p>     一个HTTP请求的处理可能需要多个Servlet合作，而这几个Servlet之间可以通过某种方式传递信息，但这个信息在请求结束后就无效了。request里的变量可以跨越forward前后的两页。但是只要刷新页面，它们就重新计算了。如果把变量放到request里，就说明它的作用域是request，它的有效范围是当前请求周期。 所谓请求周期，就是指从http请求发起，到服务器处理结束，返回响应的整个过程。在这个过程中可能使用forward的方式跳转了多个jsp页面，在这些页面里你都可以使用这个变量。 </p>
+
+<p>Servlet之间的信息共享是通过HttpServletRequest接口的两个方法来实现的： </p>
+
+<p>void setAttribute（String name, Object value） //将对象value以name为名称保存到request作用域中。 </p>
+
+<p>Object getAttribute（String name） //从request作用域中取得指定名字的信息。 </p>
+
+<p>     JSP中的doGet()、doPost()方法的第一个参数就是HttpServletRequest对象，使用这个对象的 setAttribute()方法即可传递信息。那么在设置好信息之后，要通过何种方式将信息传给其他的Servlet呢？这就要用到RequestDispatcher接口的forward()方法，通过它将请求转发给其他Servlet。 </p>
+
+<p> RequestDispatcher ServletContext.getRequestDispatcher(String path) //取得Dispatcher以便转发，path为转发的目的Servlet。 </p>
+
+<p> void RequestDispatcher.forward(ServletRequest request, ServletResponse response)//将request和response转发 </p>
+
+<p>     因此，只需要在当前Servlet中先通过setAttribute()方法设置相应的属性，然后使用forward()方法进行跳转，最后在跳转到的Servlet中通过使用getAttribute()方法即可实现信息传递。 </p>
+
+<p>  需要注意两点： </p>
+
+<p>1、转发不是重定向，转发是在Web应用内部进行的。 </p>
+
+<p>2、转发对浏览器是透明的，也就是说，无论在服务器上如何转发，浏览器地址栏中显示的仍然是最初那个Servlet的地址。 </p>
+
+<p>page作用域 </p>
+
+<p>page对象的作用范围仅限于用户请求的当前页面，对于page对象的引用将在响应返回给客户端之后被释放，或者在请求被转发到其他地方后被释放。page里的变量只要页面跳转了，它们就不见了。如果把变量放到pageContext里，就说明它的作用域是page，它的有效范围只在当前jsp页面里。从把变量放到pageContext开始，到jsp页面结束，你都可以使用这个变量。 </p>
+
+<p>以上介绍的作用范围越来越小，request和page的生命周期都是短暂的，它们之间的区别：一个request可以包含多个page页（include，forward及filter）。 </p>
+
+<p>为了让大家更容易理解application、session、request、page 4个对象的作用范围，我们给出两个程序来进行详细说明。 </p>
+
+<p>session 和 cookie 有什么区别？ </p>
+
+<p>cookie与session的区别有：cookie以文本格式存储在浏览器上，存储量有限；而会话存储在服务端，可以无限量存储多个变量并且比cookie更安全 </p>
+
+<p>cookie </p>
+
+<p>位于用户的计算机上，用来维护用户计算机中的信息，直到用户删除。比如我们在网页上登录某个软件时输入用户名及密码时如果保存为cookie，则每次我们访问的时候就不需要登录网站了。我们可以在浏览器上保存任何文本，而且我们还可以随时随地的去阻止它或者删除。我们同样也可以禁用或者编辑cookie，但是有一点需要注意不要使用cookie来存储一些隐私数据，以防隐私泄露 </p>
+
+<p>session </p>
+
+<p>session称为会话信息，位于web服务器上，主要负责访问者与网站之间的交互，当访问浏览器请求http地址时，将传递到web服务器上并与访问信息进行匹配， 当关闭网站时就表示会话已经结束，网站无法访问该信息了，所以它无法保存永久数据，我们无法访问以及禁用网站 </p>
+
+<hr>
+
+
+
+<h5 id="session与cookie的区别">session与cookie的区别</h5>
+
+<p>（1）Cookie以文本文件格式存储在浏览器中，而session存储在服务端它存储了限制数据量。它只允许4kb它没有在cookie中保存多个变量。 </p>
+
+<p>（2）cookie的存储限制了数据量，只允许4KB，而session是无限量的 </p>
+
+<p>（3）我们可以轻松访问cookie值但是我们无法轻松访问会话值，因此它更安全 </p>
+
+<p>（4）设置cookie时间可以使cookie过期。但是使用session-destory（），我们将会销毁会话。 </p>
+
+<p>总结：如果我们需要经常登录一个站点时，最好用cookie来保存信息，要不然每次登陆都特别麻烦，如果对于需要安全性高的站点以及控制数据的能力时需要用会话效果更佳，当然我们也可以结合两者，使网站按照我们的想法进行运行 </p>
+
+<p>说一下 session 的工作原理？ </p>
+
+<p>Session是个服务端技术，利用这个技术 服务器在运行时候可以为每一个用户浏览器创建一个独享的session对象。由于未用户浏览器独享，所以每一个用户在访问服务器的web资源的时候，可以把给自的session中，当用户在去访问服务器的web资源的时候。其他web资源在从各自的session中取出数据为用户服务。 </p>
+
+<hr>
+
+
+
+<h5 id="如果客户端禁止-cookie-能实现-session-还能用吗">如果客户端禁止 cookie 能实现 session 还能用吗？</h5>
+
+<p>一般默认情况下，在会话中，服务器存储 session 的 sessionid 是通过 cookie 存到浏览器里。 </p>
+
+<p>如果浏览器禁用了 cookie，浏览器请求服务器无法携带 sessionid，服务器无法识别请求中的用户身份，session失效。 </p>
+
+<p>但是可以通过其他方法在禁用 cookie 的情况下，可以继续使用session。 </p>
+
+<p>通过url重写，把 sessionid 作为参数追加的原 url 中，后续的浏览器与服务器交互中携带 sessionid 参数。 </p>
+
+<p>服务器的返回数据中包含 sessionid，浏览器发送请求时，携带 sessionid 参数。 </p>
+
+<p>通过 Http 协议其他 header 字段，服务器每次返回时设置该 header 字段信息，浏览器中 js 读取该 header 字段，请求服务器时，js设置携带该 header 字段 </p>
+
+<hr>
+
+
+
+<h5 id="spring-mvc-和-struts-的区别是什么">spring mvc 和 struts 的区别是什么？</h5>
+
+<p>SpringMVC: </p>
+
+<p>   我们的springmvc是一个优秀的控制层mvc框架,它是spring的一部分,可以简化我们的web开发,其本质是一个DispatcherServlet.主要有五个部分组成,前端控制器（DispatcherServlet）、请求到处理器映射（HandlerMapping）、处理器适配器（HandlerAdapter）、视图解析器（ViewResolver）、处理器或页面控制器（Controller）、验证器（ Validator）、命令对象（Command 请求参数绑定到的对象就叫命令对象）、表单对象分工明确，而且扩展点相当灵活，可以很容易扩展,具有可适配,可定制性等特点,HandlerMapping、ViewResolver等能够非常简单的定制,功能强大的数据验证、格式化、绑定机制,强大的JSP标签库，使JSP编写更容易.还有比如RESTful风格的支持、简单的文件上传. </p>
+
+<p>springmvc与struts2不同 </p>
+
+<p>springmvc的入口是一个servlet即前端控制器，而struts2入口是一个filter过虑器。 </p>
+
+<p>springmvc是基于方法开发(一个url对应一个方法)，请求参数传递到方法的形参，可以设计为单例或多例(建议单例)，struts2是基于类开发，传递参数是通过类的属性，只能设计为多例。 </p>
+
+<p>Struts采用值栈存储请求和响应的数据，通过OGNL存取数据， springmvc通过参数解析器是将request请求内容解析，并给方法形参赋值，将数据和视图封装成ModelAndView对象，最后又将ModelAndView中的模型数据通过reques域传输到页面。Jsp视图解析器默认使用jstl。 </p>
+
+<hr>
+
+
+
+<h5 id="springmvc与struts2有什么区别">springmvc与struts2有什么区别?</h5>
+
+<ol start="1"><li rel="1"><p>底层实现机制 </p></li>
+</ol>
+
+<p>struts2:filter </p>
+
+<p>springmvc:servlet </p>
+
+<ol start="2"><li rel="2"><p>运行效率 </p></li>
+</ol>
+
+<p>struts2:底层是Servlet,参数基于属性封装,如果配置单例,会出现线程安全问题,所以配置多例 </p>
+
+<p>springmvc:底层是Servlet,单例 </p>
+
+<ol start="3"><li rel="3"><p>参数封装 </p></li>
+</ol>
+
+<p>struts2:基于属性封装 </p>
+
+<p>springmvc:基于方法进行封装 </p>
+
+<hr>
+
+
+
+<h5 id="如何避免-sql-注入">如何避免 sql 注入？</h5>
+
+<p>SQL注入简介 </p>
+
+<p>    SQL注入是比较常见的网络攻击方式之一，它不是利用操作系统的BUG来实现攻击，而是针对程序员编程时的疏忽，通过SQL语句，实现无帐号登录，甚至篡改数据库。 </p>
+
+<p>二、SQL注入攻击的总体思路 </p>
+
+<p>1.寻找到SQL注入的位置 </p>
+
+<p>2.判断服务器类型和后台数据库类型 </p>
+
+<p>3.针对不通的服务器和数据库特点进行SQL注入攻击 </p>
+
+<p>三、SQL注入攻击实例 </p>
+
+<p>比如在一个登录界面，要求输入用户名和密码： </p>
+
+<p>可以这样输入实现免帐号登录： </p>
+
+<p>用户名： ‘or 1 = 1 – </p>
+
+<p>密 码： </p>
+
+<p>点登陆,如若没有做特殊处理,那么这个非法用户就很得意的登陆进去了.(当然现在的有些语言的数据库API已经处理了这些问题) </p>
+
+<p>这是为什么呢? 下面我们分析一下： </p>
+
+<p>从理论上说，后台认证程序中会有如下的SQL语句： </p>
+
+<p>String sql = “select * from user_table where username= </p>
+
+<p>’ “+userName+” ’ and password=’ “+password+” ‘”; </p>
+
+<p>当输入了上面的用户名和密码，上面的SQL语句变成： </p>
+
+<p>SELECT * FROM user_table WHERE username= </p>
+
+<p>‘’or 1 = 1 – and password=’’ </p>
+
+<p>分析SQL语句： </p>
+
+<p>条件后面username=”or 1=1 用户名等于 ” 或1=1 那么这个条件一定会成功； </p>
+
+<p>然后后面加两个-，这意味着注释，它将后面的语句注释，让他们不起作用，这样语句永远都能正确执行，用户轻易骗过系统，获取合法身份。 </p>
+
+<p>这还是比较温柔的，如果是执行 </p>
+
+<p>SELECT * FROM user_table WHERE </p>
+
+<p>username=” ;DROP DATABASE (DB Name) –’ and password=” </p>
+
+<p>….其后果可想而知…  </p>
+
+<p>四、应对方法 </p>
+
+<p>下面我针对JSP，说一下应对方法： </p>
+
+<p>1.（简单又有效的方法）PreparedStatement </p>
+
+<p>采用预编译语句集，它内置了处理SQL注入的能力，只要使用它的setXXX方法传值即可。 </p>
+
+<p>使用好处： </p>
+
+<p>(1).代码的可读性和可维护性. </p>
+
+<p>(2).PreparedStatement尽最大可能提高性能. </p>
+
+<p>(3).最重要的一点是极大地提高了安全性. </p>
+
+<p>原理： </p>
+
+<p>sql注入只对sql语句的准备(编译)过程有破坏作用 </p>
+
+<p>而PreparedStatement已经准备好了,执行阶段只是把输入串作为数据处理, </p>
+
+<p>而不再对sql语句进行解析,准备,因此也就避免了sql注入问题. </p>
+
+<hr>
+
+
+
+<h5 id="什么是-xss-攻击如何避免">什么是 XSS 攻击，如何避免？</h5>
+
+<p>首先，这个词实际上是CSS（Cross Site Scripting），但它与CSS同名。所以名字是XSS。跨站点脚本攻击类似于上面提到的CSRF。实际上，原则是将一段JavaScript代码注入网页。然后当其他用户访问该页面时，他们将运行黑客编写的JS代码来实现一些帐户控制。经典故事是：2011年6月28日，新浪微博被XSS攻击，大量用户自动转发微博、私信。自动关注用户，大量用户被莫名其妙地控制。因为可以使用JS代码代替用户单击按钮发送请求，所以损坏非常大。反射XSS攻击：搜索模块越常见，例如：https：//www.lucklnk.com/Search？wd =攻击，当搜索链接正常时，应将wd参数传递给搜索词，并且然后在页面上显示当前搜索词，您可以使用此门户传递一些不同的数据，例如，我将其更改为：https：//www.lucklnk.com/Search？wd =，页面将是使用JS代码注入类似地，也可以在没有用户感知的情况下在站点中插入其他站点的js文件，从而实现诸如控制用户和窃取cookie之类的操作，但是这样的链接必须由用户点击，并且将不要让所有用户都被招募。 </p>
+
+<p>存储XSS攻击：最后一次反射XSS攻击只能攻击点击该链接的某些用户。存储类型XSS可能会对所有用户带来攻击。经典的是用户签名栏。这个地方允许用户自定义。内容将存储在数据库中。当其他用户浏览他时，它将从数据库加载。如果恶意用户在其签名栏中注入了js参考，那么浏览他的所有人都将被Js控制，存储类型XSS的危险可能危及整个站的用户，非常危险。 </p>
+
+<hr>
+
+
+
+<h5 id="什么是-csrf-攻击如何避免">什么是 CSRF 攻击，如何避免？</h5>
+
+<p>让我来谈谈这个词：CSRF（Cross-site request forgery）跨站请求伪造，这个词还是不了解，不用担心，我们先讲一个故事，一个真实的故事。那是在2009年，一名黑客利用CSRF通过Gmail的成功攻击成功窃取了好莱坞明星Vanessa Hudgens的邮箱。攻击很简单，她给她发了一封电子邮件，内容是图片，但这张照片有点特别。它是这样写的：当用户点击邮件加载图片时，他实际上访问了这样的链接：https：//mail.google.com/mail？ui = 2＆fw = true＆fwe = my @ email.com，这个链接的功能是Gmail设置邮件转发，因此目标邮箱中的所有邮件都被转发到黑客指定的邮箱。有很多这样的例子。只需构造正确的Get链接，让浏览器发送Get请求。由于用户已经登录，因此它将携带正确的cookie并直接访问链接以实现相关功能。 </p>
+
+<p>在了解了原理之后，如何破解黑客的攻击？解决方案是向表单添加字段标记。黑客无法猜出已经改变的令牌，所以即使你添加一个UUID令牌，将它保存到服务器会话，黑客也不可能猜出随机令牌，就无法构造出能实现功能的链接了 </p>
+
+<p>异常 </p>
+
+<hr>
+
+
+
+<h5 id="throw-和-throws-的区别">throw 和 throws 的区别？</h5>
+
+<p>1.1   throw是语句抛出一个异常。 </p>
+
+<p>语法：throw (异常对象); </p>
+
+<p>         throw e; </p>
+
+<p>1.2   throws是方法可能抛出异常的声明。(用在声明方法时，表示该方法可能要抛出异常) </p>
+
+<p>语法：<a href="http://返回值类型" target="_blank">(修饰符)</a>(方法名)([参数列表])[throws(异常类)]{……} </p>
+
+<p>            public void doA(int a) throws Exception1,Exception3{……} </p>
+
+<p>final、finally、finalize 有什么区别？ </p>
+
+<p>try-catch-finally 中哪个部分可以省略？ </p>
+
+<p>try-catch-finally 中，如果 catch 中 return 了，finally 还会执行吗？ </p>
+
+<p>1、不管有没有异常，finally中的代码都会执行 </p>
+
+<p>2、当try、catch中有return时，finally中的代码依然会继续执行 </p>
+
+<p>3、finally是在return后面的表达式运算之后执行的，此时并没有返回运算之后的值，而是把值保存起来，不管finally对该值做任何的改变，返回的值都不会改变，依然返回保存起来的值。也就是说方法的返回值是在finally运算之前就确定了的。 </p>
+
+<p>4、如果return的数据是引用数据类型，而在finally中对该引用数据类型的属性值的改变起作用，try中的return语句返回的就是在finally中改变后的该属性的值。 </p>
+
+<p>5、finally代码中最好不要包含return，程序会提前退出，也就是说返回的值不是try或catch中的值 </p>
+
+<p>先执行try中的语句，包括return后面的表达式， </p>
+
+<p>有异常时,先执行catch中的语句，包括return后面的表达式, </p>
+
+<p>然后执行finally中的语句,如果finally里面有return语句，会提前退出， </p>
+
+<p>最后执行try中的return，有异常时执行catch中的return。 </p>
+
+<p>在执行try、catch中的return之前一定会执行finally中的代码（如果finally存在），如果finally中有return语句，就会直接执行finally中的return方法，所以finally中的return语句一定会被执行的。编译器把finally中的return语句标识为一个warning. </p>
+
+<hr>
+
+
+
+<h5 id="常见的异常类有哪些">常见的异常类有哪些？</h5>
+
+<p>(1)NullPointerException 当应用程序试图访问空对象时，则抛出该异常。  <br>
+(2)SQLException 提供关于数据库访问错误或其他错误信息的异常。  <br>
+(3)IndexOutOfBoundsException指示某排序索引（例如对数组、字符串或向量的排序）超出范围时抛出。   <br>
+(4)NumberFormatException当应用程序试图将字符串转换成一种数值类型，但该字符串不能转换为适当格式时，抛出该异常。  <br>
+(5)FileNotFoundException当试图打开指定路径名表示的文件失败时，抛出此异常。  <br>
+(6)IOException当发生某种I/O异常时，抛出此异常。此类是失败或中断的I/O操作生成的异常的通用类。  <br>
+(7)ClassCastException当试图将对象强制转换为不是实例的子类时，抛出该异常。  <br>
+(8)ArrayStoreException试图将错误类型的对象存储到一个对象数组时抛出的异常。  <br>
+(9)IllegalArgumentException 抛出的异常表明向方法传递了一个不合法或不正确的参数。  <br>
+(10)ArithmeticException当出现异常的运算条件时，抛出此异常。例如，一个整数“除以零”时，抛出此类的一个实例。   <br>
+(11)NegativeArraySizeException如果应用程序试图创建大小为负的数组，则抛出该异常。  <br>
+(12)NoSuchMethodException无法找到某一特定方法时，抛出该异常。  <br>
+(13)SecurityException由安全管理器抛出的异常，指示存在安全侵犯。  <br>
+(14)UnsupportedOperationException当不支持请求的操作时，抛出该异常。  <br>
+(15)RuntimeExceptionRuntimeException 是那些可能在Java虚拟机正常运行期间抛出的异常的超类。 </p>
+
+<p>网络 </p>
+
+<hr>
+
+
+
+<h5 id="http-响应码-301-和-302-代表的是什么有什么区别">http 响应码 301 和 302 代表的是什么？有什么区别？</h5>
+
+<p>官方的比较简洁的说明： </p>
+
+<p>        301 redirect: 301 代表永久性转移(Permanently Moved) </p>
+
+<p>        302 redirect: 302 代表暂时性转移(Temporarily Moved ) </p>
+
+<p>        ps:这里也顺带记住了两个比较相近的英语单词（permanently、temporarily），嘻哈！ </p>
+
+<p>        详细来说，301和302状态码都表示重定向，就是说浏览器在拿到服务器返回的这个状态码后会自动跳转到一个新的URL地址，这个地址可以从响应的Location首部中获取（用户看到的效果就是他输入的地址A瞬间变成了另一个地址B）——这是它们的共同点。他们的不同在于。301表示旧地址A的资源已经被永久地移除了（这个资源不可访问了），搜索引擎在抓取新内容的同时也将旧的网址交换为重定向之后的网址；302表示旧地址A的资源还在（仍然可以访问），这个重定向只是临时地从旧地址A跳转到地址B，搜索引擎会抓取新的内容而保存旧的网址。 </p>
+
+<p>forward 和 redirect 的区别？ </p>
+
+<p>两者的区别总结： </p>
+
+<p>1. 从地址栏显示来说： </p>
+
+<p>1）forword是服务器内部的重定向，服务器直接访问目标地址的 url网址，把里面的东西读取出来，但是客户端并不知道，因此用forward的话，客户端浏览器的网址是不会发生变化的。 </p>
+
+<p>2）redirect是服务器根据逻辑，发送一个状态码，告诉浏览器重新去请求那个地址，所以地址栏显示的是新的地址。 </p>
+
+<p>2。 从数据共享来说： </p>
+
+<p>1）由于在整个定向的过程中用的是同一个request，因此forward会将request的信息带到被重定向的jsp或者servlet中使用。即可以共享数据 </p>
+
+<p>2）redirect不能共享 </p>
+
+<p>3. 从运用的地方来说 </p>
+
+<p>1）forword 一般用于用户登录的时候，根据角色转发到相应的模块 </p>
+
+<p>2） redirect一般用于用户注销登录时返回主页面或者跳转到其他网站 </p>
+
+<p>4。 从效率来说： </p>
+
+<p>1）forword效率高，而redirect效率低 </p>
+
+<p>5. 从本质来说： </p>
+
+<p>forword转发是服务器上的行为，而redirect重定向是客户端的行为 </p>
+
+<p>简述 tcp 和 udp的区别？ </p>
+
+<p>tcp 传输控制协议，经过三次握手实现连接。这中间有建立连接-传送数据-释放连接。是面向连接的安全的协议。  <br>
+udp 用户数据报协议。是面向无连接的不安全的协议。适用于少量数据的传输。只把数据发送出去，不考虑对方时候接受和接受是否正确。在针对少量数据传输的时候，要比tcp快，而且实用 </p>
+
+<hr>
+
+
+
+<h5 id="tcp-为什么要三次握手两次不行吗为什么">tcp 为什么要三次握手，两次不行吗？为什么？</h5>
+
+<p>这是一个很有意思的问题~   </p>
+
+<p>　　首先，我们要知道TCP是全双工的，即客户端在给服务器端发送信息的同时，服务器端也可以给客户端发送信息。而半双工的意思是A可以给B发，B也可以给A发，但是A在给B发的时候，B不能给A发，即不同时，为半双工。 单工为只能A给B发，B不能给A发； 或者是只能B给A发，不能A给B发。 </p>
+
+<p>　　我们假设A和B是通信的双方。我理解的握手实际上就是通信，发一次信息就是进行一次握手。 </p>
+
+<p>第一次握手： A给B打电话说，你可以听到我说话吗？ </p>
+
+<p>第二次握手： B收到了A的信息，然后对A说： 我可以听得到你说话啊，你能听得到我说话吗？   </p>
+
+<p>第三次握手： A收到了B的信息，然后说可以的，我要给你发信息啦！ </p>
+
+<p>　　在三次握手之后，A和B都能确定这么一件事： 我说的话，你能听到； 你说的话，我也能听到。 这样，就可以开始正常通信了。 </p>
+
+<p>　　注意： HTTP是基于TCP协议的，所以每次都是客户端发送请求，服务器应答，但是TCP还可以给其他应用层提供服务，即可能A、B在建立链接之后，谁都可能先开始通信。 </p>
+
+<p>　　如果两次，那么B无法确定B的信息A是否能收到，所以如果B先说话，可能后面的A都收不到，会出现问题 。 </p>
+
+<p>　　如果四次，那么就造成了浪费，因为在三次结束之后，就已经可以保证A可以给B发信息，A可以收到B的信息； B可以给A发信息，B可以收到A的信息。 </p>
+
+<hr>
+
+
+
+<h5 id="说一下-tcp-粘包是怎么产生的">说一下 tcp 粘包是怎么产生的？</h5>
+
+<p>1、什么是 tcp 粘包？ </p>
+
+<p>发送方发送的多个数据包，到接收方缓冲区首尾相连，粘成一包，被接收。 </p>
+
+<p>2、原因 </p>
+
+<p>TCP 协议默认使用 Nagle 算法可能会把多个数据包一次发送到接收方。 </p>
+
+<p>应用程读取缓存中的数据包的速度小于接收数据包的速度，缓存中的多个数据包会被应用程序当成一个包一次读取。 </p>
+
+<p>3、处理方法 </p>
+
+<p>发送方使用 TCP_NODELAY 选项来关闭 Nagle 算法 </p>
+
+<p>数据包增加开始符和结束，应用程序读取、区分数据包。 </p>
+
+<p>在数据包的头部定义整个数据包的长度，应用程序先读取数据包的长度，然后读取整个长度的包字节数据，保证读取的是单个包且完整。 </p>
+
+<p>OSI 的七层模型都有哪些？ </p>
+
+<p>get 和 post 请求有哪些区别？ </p>
+
+<p>GET在浏览器回退时是无害的，而POST会再次提交请求。 </p>
+
+<p>GET产生的URL地址可以被Bookmark，而POST不可以。 </p>
+
+<p>GET请求会被浏览器主动cache，而POST不会，除非手动设置。 </p>
+
+<p>GET请求只能进行url编码，而POST支持多种编码方式。 </p>
+
+<p>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。 </p>
+
+<p>GET请求在URL中传送的参数是有长度限制的，而POST么有。 </p>
+
+<p>对参数的数据类型，GET只接受ASCII字符，而POST没有限制。 </p>
+
+<p>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。 </p>
+
+<p>GET参数通过URL传递，POST放在Request body中。 </p>
+
+<p>如何实现跨域？ </p>
+
+<p>跨域：当浏览器执行脚本时会检查是否同源，只有同源的脚本才会执行，如果不同源即为跨域。 </p>
+
+<p>这里的同源指访问的协议、域名、端口都相同。 </p>
+
+<p>同源策略是由 Netscape 提出的著名安全策略，是浏览器最核心、基本的安全功能，它限制了一个源中加载脚本与来自其他源中资源的交互方式。 </p>
+
+<p>Ajax 发起的跨域 HTTP 请求，结果被浏览器拦截，同时 Ajax 请求不能携带与本网站不同源的 Cookie。 </p>
+
+<p></p>
+
+<h5 id="如何实现跨域请求呢">如何实现跨域请求呢？</h5>
+
+<p>1、jsonp </p>
+
+<p>利用了 script 不受同源策略的限制 </p>
+
+<p>缺点：只能 get 方式，易受到 XSS攻击 </p>
+
+<p>2、CORS（Cross-Origin Resource Sharing）,跨域资源共享 </p>
+
+<p>当使用XMLHttpRequest发送请求时，如果浏览器发现违反了同源策略就会自动加上一个请求头 origin； </p>
+
+<p>后端在接受到请求后确定响应后会在后端在接受到请求后确定响应后会在 Response Headers 中加入一个属性 Access-Control-Allow-Origin； </p>
+
+<p>浏览器判断响应中的 Access-Control-Allow-Origin 值是否和当前的地址相同，匹配成功后才继续响应处理，否则报错 </p>
+
+<p>缺点：忽略 cookie，浏览器版本有一定要求 </p>
+
+<p>3、代理跨域请求 </p>
+
+<p>前端向发送请求，经过代理，请求需要的服务器资源 </p>
+
+<p>缺点：需要额外的代理服务器 </p>
+
+<p>4、Html5 postMessage 方法 </p>
+
+<p>允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本、多窗口、跨域消息传递 </p>
+
+<p>缺点：浏览器版本要求，部分浏览器要配置放开跨域限制 </p>
+
+<p>5、修改 document.domain 跨子域 </p>
+
+<p>相同主域名下的不同子域名资源，设置 document.domain 为 相同的一级域名 </p>
+
+<p>缺点：同一一级域名；相同协议；相同端口 </p>
+
+<p>6、基于 Html5 websocket 协议 </p>
+
+<p>websocket 是 Html5 一种新的协议，基于该协议可以做到浏览器与服务器全双工通信，允许跨域请求 </p>
+
+<p>缺点：浏览器一定版本要求，服务器需要支持 websocket 协议 </p>
+
+<p>7、document.xxx + iframe </p>
+
+<p>通过 iframe 是浏览器非同源标签，加载内容中转，传到当前页面的属性中 </p>
+
+<p>缺点：页面的属性值有大小限制 </p>
+
+<hr>
+
+
+
+<h5 id="说一下-jsonp-实现原理">说一下 JSONP 实现原理？</h5>
+
+<p>设计模式 </p>
+
+<hr>
+
+
+
+<h5 id="说一下你熟悉的设计模式">说一下你熟悉的设计模式？</h5>
+
+<hr>
+
+
+
+<h5 id="简单工厂和抽象工厂有什么区别">简单工厂和抽象工厂有什么区别？</h5>
+
+<p>简单工厂模式 </p>
+
+<p>是由一个工厂对象创建产品实例，简单工厂模式的工厂类一般是使用静态方法，通过不同的参数的创建不同的对象实例 </p>
+
+<p>可以生产结构中的任意产品，不能增加新的产品 </p>
+
+<p>抽象工厂模式 </p>
+
+<p>提供一个创建一系列相关或相互依赖对象的接口，而无需制定他们具体的类，生产多个系列产品 </p>
+
+<p>生产不同产品族的全部产品，不能新增产品，可以新增产品族 </p>
+
+<p>Spring/Spring MVC </p>
+
+<hr>
+
+
+
+<h5 id="为什么要使用-spring">为什么要使用 spring？</h5>
+
+<p>1.方便解耦，便于开发（Spring就是一个大工厂，可以将所有对象的创建和依赖关系维护都交给spring管理） </p>
+
+<p>2.spring支持aop编程（spring提供面向切面编程，可以很方便的实现对程序进行权限拦截和运行监控等功能） </p>
+
+<p>3.声明式事务的支持（通过配置就完成对事务的支持，不需要手动编程） </p>
+
+<p>4.方便程序的测试，spring 对junit4支持，可以通过注解方便的测试spring 程序 </p>
+
+<p>5.方便集成各种优秀的框架（） </p>
+
+<p>6.降低javaEE API的使用难度（Spring 对javaEE开发中非常难用的一些API 例如JDBC,javaMail,远程调用等，都提供了封装，是这些API应用难度大大降低） </p>
+
+<hr>
+
+
+
+<h5 id="解释一下什么是-aop">解释一下什么是 aop？</h5>
+
+<hr>
+
+
+
+<h5 id="解释一下什么是-ioc">解释一下什么是 ioc？</h5>
+
+<p>本人理解：就是把原本你自己制造，使用的对象，现在交由别人制造，而通过构造函数，setter方法或方法（这里指使用这个对象的方法）参数的方式传给你，由你使用。 </p>
+
+<hr>
+
+<h5 id="spring-有哪些主要模块">spring 有哪些主要模块？</h5>
+
+<ol start="1"><li rel="1"><p>Spring Core </p></li>
+</ol>
+
+<p>框架的最基础部分，提供 IoC 容器，对 bean 进行管理。 </p>
+
+<p>2.Spring Context </p>
+
+<p>基于 bean，提供上下文信息，扩展出JNDI、EJB、电子邮件、国际化、校验和调度等功能。 </p>
+
+<p>3．Spring DAO </p>
+
+<p>提供了JDBC的抽象层，它可消除冗长的JDBC编码和解析数据库厂商特有的错误代码，还提供了声明性事务管理方法。 </p>
+
+<p>4.Spring ORM </p>
+
+<p>提供了常用的“对象/关系”映射APIs的集成层。 其中包括JPA、JDO、Hibernate、MyBatis 等。 </p>
+
+<p>5.Spring AOP </p>
+
+<p>提供了符合AOP Alliance规范的面向方面的编程实现。 </p>
+
+<p>6.Spring Web </p>
+
+<p>提供了基础的 Web 开发的上下文信息，可与其他 web 进行集成。 </p>
+
+<p>7.Spring Web MVC </p>
+
+<p>提供了 Web 应用的 Model-View-Controller 全功能实现 </p>
+
+<p>———————————————— </p>
+
+<hr>
+
+
+
+<h5 id="spring-常用的注入方式有哪些">spring 常用的注入方式有哪些？</h5>
+
+<p>1.属性注入 </p>
+
+<p>属性注入即通过setXXX( )方法注入bean的属性值或依赖对象。由于属性注入方式具有可选择性和灵活性高的特点，因此它也是实际开发中最常用的注入方式。 </p>
+
+<p>2.构造函数注入 </p>
+
+<p>构造函数注入是除属性注入之外的另一种常用的注入方式，它可以保证一些必要的属性在bean实例化时就得到了设置，并在实例化后就可以使用。 </p>
+
+<p>3.工厂方法注入 </p>
+
+<p>工厂方法是应用中被经常使用的设计模式，也是 控制反转 和 单实例设计思想 的主要实现方法。工厂类负责创建一个或多个工厂类实例，工厂类方法一般以接口或抽象类变量的形式返回目标类实例。 </p>
+
+<p>spring 中的 bean 是线程安全的吗？ </p>
+
+<p>pring中的Bean默认是单例模式的，框架并没有对bean进行多线程的封装处理 </p>
+
+<p>实际上大部分时间Bean是无状态的（比如Dao） 所以说在某种程度上来说Bean其实是安全的 </p>
+
+<p>但是如果Bean是有状态的 那就需要开发人员自己来进行线程安全的保证，最简单的办法就是改变bean的作用域 把 “singleton”改为’‘protopyte’ 这样每次请求Bean就相当于是 new Bean() 这样就可以保证线程的安全了 </p>
+
+<p>有状态就是有数据存储功能 </p>
+
+<p>无状态就是不会保存数据 </p>
+
+<hr>
+
+
+
+<h5 id="spring-支持几种-bean-的作用域">spring 支持几种 bean 的作用域？</h5>
+
+<p>1、作用域scope配置项 </p>
+
+<p>作用域限定了Spring Bean的作用范围，在Spring配置文件定义Bean时，通过声明scope配置项，可以灵活定义Bean的作用范围。例如，当你希望每次IOC容器返回的Bean是同一个实例时，可以设置scope为singleton；当你希望每次IOC容器返回的Bean实例是一个新的实例时，可以设置scope为prototype。 </p>
+
+<p>scope配置项有5个属性，用于描述不同的作用域。 </p>
+
+<p>① singleton </p>
+
+<p>使用该属性定义Bean时，IOC容器仅创建一个Bean实例，IOC容器每次返回的是同一个Bean实例。 </p>
+
+<p>② prototype </p>
+
+<p>使用该属性定义Bean时，IOC容器可以创建多个Bean实例，每次返回的都是一个新的实例。 </p>
+
+<p>③ request </p>
+
+<p>该属性仅对HTTP请求产生作用，使用该属性定义Bean时，每次HTTP请求都会创建一个新的Bean，适用于WebApplicationContext环境。 </p>
+
+<p>④ session </p>
+
+<p>该属性仅用于HTTP Session，同一个Session共享一个Bean实例。不同Session使用不同的实例。 </p>
+
+<p>⑤ global-session </p>
+
+<p>该属性仅用于HTTP Session，同session作用域不同的是，所有的Session共享一个Bean实例。 </p>
+
+<p>下面重点讨论singleton、prototyp作用域，request、session和global-session类作用域放到Spring MVC章节讨论，这里不再做详细讲述。 </p>
+
+<p>2、singleton作用域 </p>
+
+<p>singleton是默认的作用域，当定义Bean时，如果没有指定scope配置项，Bean的作用域被默认为singleton。singleton属于单例模式，在整个系统上下文环境中，仅有一个Bean实例。也就是说，在整个系统上下文环境中，你通过Spring IOC获取的都是同一个实例。 </p>
+
+<p>3、prototype作用域 </p>
+
+<p>当一个Bean的作用域被定义prototype时，意味着程序每次从IOC容器获取的Bean都是一个新的实例。因此，对有状态的bean应该使用prototype作用域，而对无状态的bean则应该使用singleton作用域。 </p>
+
+<p>Spring IOC容器创建一个Bean实例时，可以为Bean指定实例的作用域，作用域包括singleton（单例模式）、prototype（原型模式）、request（HTTP请求）、session（会话）、global-session（全局会话）。 </p>
+
+<p>spring 自动装配 bean 有哪些方式？ </p>
+
+<p>default - 默认的方式和 “no” 方式一样 </p>
+
+<p>no - 不自动装配，需要使用 节点或参数 </p>
+
+<p>byName - 根据名称进行装配 </p>
+
+<p>byType - 根据类型进行装配 </p>
+
+<p>constructor - 根据构造函数进行装配 </p>
+
+<p>spring 事务实现方式有哪些？ </p>
+
+<p>（1）编程式事务管理对基于 POJO 的应用来说是唯一选择。我们需要在代码中调用beginTransaction()、commit()、rollback()等事务管理相关的方法，这就是编程式事务管理。 </p>
+
+<p>（2）基于 TransactionProxyFactoryBean的声明式事务管理 </p>
+
+<p>（3）基于 @Transactional 的声明式事务管理 </p>
+
+<p>（4）基于Aspectj AOP配置事务 </p>
+
+<p>说一下 spring 的事务隔离？ </p>
+
+<p>spring事务： </p>
+
+<p>什么是事务: </p>
+
+<p>事务逻辑上的一组操作,组成这组操作的各个逻辑单元,要么一起成功,要么一起失败. </p>
+
+<p>事务特性（4种）: </p>
+
+<p>原子性 （atomicity）:强调事务的不可分割. </p>
+
+<p>一致性 （consistency）:事务的执行的前后数据的完整性保持一致. </p>
+
+<p>隔离性 （isolation）:一个事务执行的过程中,不应该受到其他事务的干扰 </p>
+
+<p>持久性（durability） :事务一旦结束,数据就持久到数据库 </p>
+
+<p>如果不考虑隔离性引发安全性问题: </p>
+
+<p>脏读 :一个事务读到了另一个事务的未提交的数据 </p>
+
+<p>不可重复读 :一个事务读到了另一个事务已经提交的 update 的数据导致多次查询结果不一致. </p>
+
+<p>虚幻读 :一个事务读到了另一个事务已经提交的 insert 的数据导致多次查询结果不一致. </p>
+
+<p>解决读问题: 设置事务隔离级别（5种） </p>
+
+<p>DEFAULT 这是一个PlatfromTransactionManager默认的隔离级别，使用数据库默认的事务隔离级别. </p>
+
+<p>未提交读（read uncommited） :脏读，不可重复读，虚读都有可能发生 </p>
+
+<p>已提交读 （read commited）:避免脏读。但是不可重复读和虚读有可能发生 </p>
+
+<p>可重复读 （repeatable read） :避免脏读和不可重复读.但是虚读有可能发生. </p>
+
+<p>串行化的 （serializable） :避免以上所有读问题. </p>
+
+<p>Mysql 默认:可重复读 </p>
+
+<p>Oracle 默认:读已提交 </p>
+
+<p>read uncommited：是最低的事务隔离级别，它允许另外一个事务可以看到这个事务未提交的数据。 </p>
+
+<p>read commited：保证一个事物提交后才能被另外一个事务读取。另外一个事务不能读取该事物未提交的数据。 </p>
+
+<p>repeatable read：这种事务隔离级别可以防止脏读，不可重复读。但是可能会出现幻象读。它除了保证一个事务不能被另外一个事务读取未提交的数据之外还避免了以下情况产生（不可重复读）。 </p>
+
+<p>serializable：这是花费最高代价但最可靠的事务隔离级别。事务被处理为顺序执行。除了防止脏读，不可重复读之外，还避免了幻象读（避免三种）。 </p>
+
+<p>事务的传播行为 </p>
+
+<p>PROPAGION_XXX :事务的传播行为 </p>
+
+<ul><li><p>保证同一个事务中 </p></li>
+</ul>
+
+<p>PROPAGATION_REQUIRED 支持当前事务，如果不存在 就新建一个(默认) </p>
+
+<p>PROPAGATION_SUPPORTS 支持当前事务，如果不存在，就不使用事务 </p>
+
+<p>PROPAGATION_MANDATORY 支持当前事务，如果不存在，抛出异常 </p>
+
+<ul><li><p>保证没有在同一个事务中 </p></li>
+</ul>
+
+<p>PROPAGATION_REQUIRES_NEW 如果有事务存在，挂起当前事务，创建一个新的事务 </p>
+
+<p>PROPAGATION_NOT_SUPPORTED 以非事务方式运行，如果有事务存在，挂起当前事务 </p>
+
+<p>PROPAGATION_NEVER 以非事务方式运行，如果有事务存在，抛出异常 </p>
+
+<p>PROPAGATION_NESTED 如果当前事务存在，则嵌套事务执行 </p>
+
+<p>说一下 spring mvc 运行流程？ </p>
+
+<p>1、 用户向服务器发送请求，请求被 Spring 前端控制 Servelt DispatcherServlet 捕获(捕获) </p>
+
+<p>2、 DispatcherServlet对请求  URL进行解析，得到请求资源标识符（URI）。然后根据该  URI，调用 HandlerMapping获得该Handler配置的所有相关的对象（包括  Handler对象以及   Handler对象对应的拦截器），最后以 HandlerExecutionChain对象的形式返回；(查找   handler) </p>
+
+<p>3、 DispatcherServlet  根据获得的 Handler，选择一个合适的  HandlerAdapter。  提取Request 中的模型数据，填充 Handler 入参，开始执行 Handler（Controller), Handler执行完成后，向 DispatcherServlet 返回一个 ModelAndView 对象(执行  handler) </p>
+
+<p>4、DispatcherServlet  根据返回的 ModelAndView，选择一个适合的 ViewResolver（必须是已经注册到 Spring 容器中的 ViewResolver) (选择  ViewResolver) </p>
+
+<p>5、通过 ViewResolver 结合 Model 和 View，来渲染视图,DispatcherServlet 将渲染结果返回给客户端。（渲染返回） </p>
+
+<p>快速记忆技巧： </p>
+
+<p>核心控制器捕获请求、查找Handler、执行Handler、选择ViewResolver,通过ViewResolver渲染视图并返回 </p>
+
+<hr>
+
+
+
+<h5 id="spring-mvc-有哪些组件">spring mvc 有哪些组件？</h5>
+
+<p>一,五大核心组件 </p>
+
+<p>　　1.DispatcherServlet　　请求入口 </p>
+
+<p>　　2.HandlerMapping　　  请求派发,负责请求和控制器建立一一对应的关系 </p>
+
+<p>　　3.Controller　　　　　  处理器 </p>
+
+<p>　　4.ModelAndView　　　  封装模型信息和视图信息 </p>
+
+<p>　　5.ViewResolver　　　　视图处理器,定位页面 </p>
+
+<p><p class="note-tags "></p>RequestMapping 的作用是什么？ </p>
+
+<p><p class="note-tags "></p>RequestMapping是一个用来处理请求地址映射的注解，可用于类或者方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。 </p>
+
+<p><p class="note-tags "></p>RequestMapping注解有六个属性，下面进行详细的说明。 </p>
+
+<p>1.value, method </p>
+
+<p>value:指定请求的实际地址，指定的地址可以是URI Template模式。 </p>
+
+<p>method:指定请求的method类型，GET、POST、PUT、DELETE等。 </p>
+
+<p>2.consumes, produces </p>
+
+<p>consumes:指定处理请求的提交内容类型（Content-Type），例如application/json,text/html。 </p>
+
+<p>produces:指定返回的内容类型，仅当request请求头中的（Accept）类型中包含该指定类型才返回。 </p>
+
+<p>3.params, headers </p>
+
+<p>params:指定request中必须包含某些参数值才让该方法处理。 </p>
+
+<p>headers:指定request中必须包含某些指定的header值，才能让该方法处理请求 </p>
+
+<p><p class="note-tags "></p>Autowired 的作用是什么？ </p>
+
+<p><p class="note-tags "></p>Autowired 是一个注释，它可以对类成员变量、方法及构造函数进行标注，让 spring 完成 bean 自动装配的工作。 </p>
+
+<p>Spring Boot/Spring Cloud </p>
+
+<hr>
+
+<h5 id="什么是-spring-boot">什么是 spring boot？</h5>
+
+<p>在Spring框架这个大家族中，产生了很多衍生框架，比如 Spring、SpringMvc框架等，Spring的核心内容在于控制反转(IOC)和依赖注入(DI),所谓控制反转并非是一种技术，而是一种思想，在操作方面是指在spring配置文件中创建，依赖注入即为由spring容器为应用程序的某个对象提供资源，比如 引用对象、常量数据等。 </p>
+
+<p>   SpringBoot是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简化是指简化了Spring众多框架中所需的大量且繁琐的配置文件，所以 SpringBoot是一个服务于框架的框架，服务范围是简化配置文件。 </p>
+
+<p>为什么要用 spring boot？ </p>
+
+<p>  最明显的特点是，让文件配置变的相当简单、让应用部署变的简单（SpringBoot内置服务器，并装备启动类代码），可以快速开启一个Web容器进行开发。 </p>
+
+<p>（1）一个简单的SpringBoot工程是不需要在pom.xml手动添加什么配置的，如果与其他技术合用 比如postMan（文档在线自动生成、开发功能测试的一套工具）、Swagger(文档在线自动生成、开发功能测试的一套工具)，则需要在pom.xml中添加依赖，由程序自动加载依赖jar包等配置文件。 </p>
+
+<p>  （2）我们之前在利用SSM或者SSH开发的时候，在resources中储存各种对应框架的配置文件，而现在我们只需要一个配置文件即可，配置内容也大体有 服务器端口号、数据库连接的地址、用户名、密码。这样，虽然简单 但在一定问题上而言，这也是极不安全的，将所有配置，放在一个文件里，是很危险的，但对于一般项目而言并不会有太大影响。 </p>
+
+<p>   （3）在SpringBoot创建时会自动创建Bootdemo1Application启动类,代表着本工程项目和服务器的启动加载，在springBoot中是内含服务器的，所以不需手动配置Tomact，但注意端口号冲突问题。 </p>
+
+<hr>
+
+<h5 id="4关于springboot各种层之间的注解问题">4、关于SpringBoot各种层之间的注解问题</h5>
+
+<p>spring boot 核心配置文件是什么？ </p>
+
+<p>Spring Boot 有两种类型的配置文件，application 和 bootstrap 文件 </p>
+
+<p>Spring Boot会自动加载classpath目前下的这两个文件，文件格式为 properties 或 yml 格式 </p>
+
+<p>*.properties 文件是 key=value 的形式 </p>
+
+<p>*.yml 是 key: value 的形式 </p>
+
+<p>*.yml 加载的属性是有顺序的，但不支持 @PropertySource 注解来导入配置，一般推荐用yml文件，看下来更加形象 </p>
+
+<p>bootstrap 配置文件是系统级别的，用来加载外部配置，如配置中心的配置信息，也可以用来定义系统不会变化的属性.bootstatp 文件的加载先于application文件 </p>
+
+<p>application 配置文件是应用级别的，是当前应用的配置文件 </p>
+
+<p>spring boot 配置文件有哪几种类型？它们有什么区别？ </p>
+
+<p>.properties 和 .yml，它们的区别主要是书写格式不同。 </p>
+
+<hr>
+
+<h5 id="spring-boot-有哪些方式可以实现热部署">spring boot 有哪些方式可以实现热部署？</h5>
+
+<p>一、maven 插件 springloaded </p>
+
+<p>1.1、添加依赖 </p>
+
+<p>1.2、启动 </p>
+
+<p>1.3、注意事项： </p>
+
+<p>二、 依赖 spring-boot-devtools 热部署模块 </p>
+
+<p>2.1、添加依赖 </p>
+
+<p>2.2、启动 </p>
+
+<hr>
+
+<h5 id="jpa-和-hibernate-有什么区别">jpa 和 hibernate 有什么区别？</h5>
+
+<hr>
+
+
+
+<h5 id="什么是-spring-cloud">什么是 spring cloud？</h5>
+
+<hr>
+
+
+
+<h5 id="spring-cloud-断路器的作用是什么">spring cloud 断路器的作用是什么？</h5>
+
+<hr>
+
+
+
+<h5 id="spring-cloud-的核心组件有哪些">spring cloud 的核心组件有哪些？</h5>
+
+<hr>
+
+
+
+<h5 id="hibernate">Hibernate</h5>
+
+<hr>
+
+
+
+<h5 id="为什么要使用-hibernate">为什么要使用 hibernate？</h5>
+
+<hr>
+
+
+
+<h5 id="什么是-orm-框架">什么是 ORM 框架？</h5>
+
+<hr>
+
+
+
+<h5 id="hibernate-中如何在控制台查看打印的-sql-语句">hibernate 中如何在控制台查看打印的 sql 语句？</h5>
+
+<hr>
+
+
+
+<h5 id="hibernate-有几种查询方式">hibernate 有几种查询方式？</h5>
+
+<hr>
+
+
+
+<h5 id="hibernate-实体类可以被定义为-final-吗">hibernate 实体类可以被定义为 final 吗？</h5>
+
+<hr>
+
+
+
+<h5 id="在-hibernate-中使用-integer-和-int-做映射有什么区别">在 hibernate 中使用 Integer 和 int 做映射有什么区别？</h5>
+
+<hr>
+
+
+
+<h5 id="hibernate-是如何工作的">hibernate 是如何工作的？</h5>
+
+<hr>
+
+
+
+<h5 id="get和-load的区别">get()和 load()的区别？</h5>
+
+<hr>
+
+
+
+<h5 id="说一下-hibernate-的缓存机制">说一下 hibernate 的缓存机制？</h5>
+
+<hr>
+
+
+
+<h5 id="hibernate-对象有哪些状态">hibernate 对象有哪些状态？</h5>
+
+<hr>
+
+
+
+<h5 id="在-hibernate-中-getcurrentsession-和-opensession-的区别是什么">在 hibernate 中 getCurrentSession 和 openSession 的区别是什么？</h5>
+
+<hr>
+
+
+
+<h5 id="hibernate-实体类必须要有无参构造函数吗为什么">hibernate 实体类必须要有无参构造函数吗？为什么？</h5>
+
+<p>Mybatis </p>
+
+<hr>
+
+<h5 id="mybatis-中-和-的区别是什么">mybatis 中 #{}和 ${}的区别是什么？</h5>
+
+<p>1、#将传入的数据都当成一个字符串，会对自动传入的数据加一个双引号。  <br>
+如：where username=#{username}，如果传入的值是111,那么解析成sql时的值为where username=”111”, 如果传入的值是id，则解析成的sql为where username=”id”.　  <br>
+2、<span class="MathJax_Preview"></span><span class="MathJax_SVG" id="MathJax-Element-32-Frame" role="textbox" aria-readonly="true" style="font-size: 100%; display: inline-block;"><span><img type="image/png" width="437.828" height="18.9844" longdesc="__SVG__undefined" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2sAAAAlCAYAAADcD3ERAAAgAElEQVR4Xu3dBbRlS3AW4A7u7u4Wgru7OwT34O7u7u4W3B0CITiEQALBCRDc3d1ZX7L/rKLp3t373HNn7sw7vdasN2/OOXt3V1dX1V/W79LW4+O31n5Fa+0PttZ+UWvtP01+8i6tte/ZWvuprbXf3Vr7oa21P79+/PY33qO19vdaa3+otfa/F7/6zq21v9ta+wOttf+2/YaX+8Xv3lr7oNbaH26t/c+NaX741to3aa29b2vt77TW/s/Gb1Zf+RKttT/aWvvbrbVvd/CD33z01pq9/4/dA775wTd/urX2gzb3rZ/Dt22t/c3jvas9X83/uT5H6+/QWvuTrbU/dydaZ65f9NjDv95a+x6ttffeWMQnbq39/NbaBx9n8V9s/ObxladRgKz7Ua01+/Rtjj172hOv//rzt9a+UWvtPVtrf7XICf9OFj4HH3z51tr7tNb+Q2vtJ7XWfvJbIm+vU//6L8jnX33otB9+/P1/XX/Mi/3FxzzsAfr6/TZ09otdyGNiDwo8KPCgwOumACN7NYC1X9Na+4qttV/YWvv+rbV/N/jRJ2+t/arW2udrrf3Yw1D/Z3cyXgn+n9ta+2attZ/XWvsRJ8bHR2qt/YRDUbx/a+3bt9b+wmqRG58zghkjf+NYJ+B4DxC0ejUw8KNbaz+wtfY7W2vf7zAKz373sVtrv+TYM/RiSP3r1YuOz79Ga+3jttZ+fWd4BTh812MPAp4YbIwNYOIDD5rUPXiv1tp3O0De5hQ+7GsxgoF/62aE1gHE/pWLQBDPf8nW2mdurf3STfB7Nu+P2lr76Qef/cpjn/7x1YVOvh+a/5TW2g+5YAh/jmP/7DknBxBx6/iMrbVvcJz9Ww3+j3DwwL86ZMmOw+HW+Z797rMea3GOZ06n/vecEe/eWsPHs/WHT79Faw0PvI5hz39za81+kRMcCP+ktWbNZIB/O3O2XZ2zc/SDD9lE1nyvA7Rdfc6b+H0y+anAKmDtFx+6apcf3xR6VbuBk4kOoDsf43kocA+efJ6ZPZ76oMCDAk+mwBWw9tFaa9+4tfYPB2/1HB5lxsAPODz69zTIGNa/obX2OVtrlJt3zMBHNZ6/5QGs7hGV+QytNc/7pq21T30YZUAKr/Vzjgq8GGC/bgMkVsPthx1gbTfC+LFaaz/7iJQxQkPnAAfrB96Nj3w8myIWUf2Jh0EL7AHuonFf7/C+30KjGMH+C4D3PJXP/1Rr7d9vvuAjHnzkv0AwoPUUXnUufmZr7aseBjJgeQ9+s5zP0lr7ja2133TMdXOJjeIGbn9ca+1rHoZ6/1sOkP++AQBz9j7OYWzdsjY89YWOCZjTj2mt/Zfdxdzpe0CLqNMXPCK9P21j7V7t3HNcfNpj3iPAEz6sZ+NO095+TJWRnBF/rPzyyxyRm790ONvukfHwCY4zTi587RJp357wG/BFeg3f49+P0Vr7wq21z3Wcb+frvz5hDQFr5DM59LaNnJtP1lqTZSEz51U4N982Ovbr4QhlE4QnOUvf7chi+hkPGr/t2/9Y3zuVAjtgLVGtT3Sk1vGO9+PTHMaAVD2pkGdeQp5qCkrU67dtCpcotj9xgKUzgBSPHmPiGx5pdPfcX2CQ8QOoffoj4gFAPsXgP5tflN4fOTzZO6BLNIW3+3ccER8Rzivjyx57wxsvkvZvWmsjsCaKypsv7Q5YCw0CFv/yEdnx+1tGUilnRnCM5C/WWsMbOyNgntElEvKUqJP3hd+cE84MEdez4cwBsPakGtSj38QA/y03GHTWh35o1J9HUXCRammboq5nwClzAIid7VtAVmjE0BCB2QELn/04W4D/PQYHi7Vk7DqVkurndyL6I3q9BLBWIxn9eRDZtF6ggNyVofDUKEdkBBlORuw6S9Dx45VI9D+6x+Y+0zNEYL9cax/i/GAQZ/z2A6A+5bVvO1iLDiAPycVbo/JPofHb9luyUHYT2n64I4qeNcpmkn3xGA8KPCjwFlJgB6zFuAXIKJgerFVDgPG3EsrxshPiDLcVYKuRMql2P2sB8AJu1GqJ9o1SNu+xlUCn+X/fwyBezevWdzIWGVm7BpZ5/ZzW2td9QlSLUpAiyGOeyEwP1kTVKAj7w8tcAYG0OdEIkUDK5dYRg+Y5wNqMn6/O9RO21n7tEaWxR2fA1Hn7Sge4/aettW81SO2s7z8Da08BMxW4zABI5nFPsMbJcgXw2SMOgH9+RAGv7s1Tv89I55QBxsgpKdUj+fYSwFqi2SK8I+eFyKCovMjiFefGiIaJqOPfq5FzQE2UXD0qZ5L64pcK2D5da80fzjlp6Bnf53BOPYW/4gR4WyNrqXGWgvu9nxiFfAqd36bf0h/kvmjvd2mtff2yuM+96QR7m+jxWMuDAu8YCgSs+a90BTUOfZrTCqxJuRFZYvStUvRi4BPevqvxxCqN8F2PNDDpeIz21fc/b2vtd7XWfvlhZD21tuCMGQJUv9pR3A8g3nOkLkQURqSsppF4t73q9yseTYXdZ4axvWCM/ufJhP1WqpjopBTUHqxRxkBZTZX0qNTYfa2j1kdN2a1jBdby+RXj84yfP9XRKOKTXpiw54li4U/RirM0waRgMliNVeRzBNaAce8Q4fqUB4hBcyDxlqjXaqmvE6yt5vbcnyfVT/q1czCLhL4EsFadWl+htfb7O+KIav7I1pr/AggMPsBN9BwgJg84wwCT1aipxKKkV/iOc4NhmfHSAZt5frajNtbfNVKS0vsUueY5kadXwNqnOJylV+i92svn+jxZERyaUs3vNehEf25Jx77XHF7CcziJRfkN6c0iwJxaj/GgwIMCbyEFKlj71q01Rqp0tqoMzoxbTTdETkQJALCz9Efv0q3sFxwNIXipd9LzfM9vPJ/QX+W9a5DBADiL6qyAypWtjgdxd36rZ9emGVLrdJkjlKv3OR3/fusR1YniSkdONWQ83n9m8jIGv6gYgC6FabQPAIjUKfPxeQVrwDAwZ198JodeGpS9iYErcrqKoni/uo9Z/eEIrKkd8RsG5r3BGnKhrTo0PL1jFGX/722UmEsP1hKVsHaNfnThM6SjOidAg3mPhtTYj3KA/p1U2jzjnQzW8PzvPc7YGS9fAWvO9HcsDZhGeyWlUUqT2tA/u2mY1kZEq9q5pMECZhxmzjGeIutF4MianOd+frU+WVfY3om0km9v4ucyB9TjGtJIv8pAZl1txHMVrEXXcq45+//ghRMyZ2LkOBhNXZRI599VR13OYWeRbvprL5wGzzk9kX4OUYOccOYf40GBBwXeUgrUNEg1aSJkokO6fAV4zcBaokoAnpbygBiDdVazQ8i6AmAn/SvkTjoeo97zdyJX0lU0MeiL7PPMABUpVruA8Wz7Aw5dE8CbKDr5lFGbZvyPA/z0ijlpbIz12nQkHTlFAnTA9PvRqA0fpCtKqejTW/GGPc4zKlgTafO5z4AVaZdo7t8/zxHZ9ExgcjYYN34nTXUGGHuwpsBfrZU/eElkT/vre0XWRnNVGwCEzpwE8SDP+M0z0RFQ6q83yPu8w3Osx98zErXTXdK5qlEJdYIBbJ4vamIOo+6PtZuqxi8cC6t05czhnQrWEtVmqK8aaOyCNfvA6AfW6v71fFfrz640z4lcWKWj1zRYMqQCtpXsSn0yeSGVsffmMyDpBAbklTq21Xtf1+f4gGEsHdxwfpzVflxtxBMZrGZ2VefqXVVma2gErDylwclz0jM2wxc5UvV6UMVZKsIbZ5O5RNaf8XvqtPCva2Q0/Fpl2jznOl/Xs+kB9oYsGoMdo/HRYzwo8KDAW0qBvmYtjSnkmacOaQTWEiXTzl/+Pk+9DoIU1qgOJ53YPsnR1IGg3RkUJOUoxTJRNYJeCsAXnzyAIAfuZuk5Vemt0tBWc6ztq31314t49tyAzTMAEuAEXAPWMbztn/o2XjZpkLMRw8LnDC53oa1qoEK3aghW5Sk6pv6EoQY4rNKjqsH4+44olohWHQEn3vlvjy6OoksBqbzNUjWvGLSZMwNiVIPZ0wxARG/GdR85tv9qmqTBnjWzwRfqdPCtfRkBP/NizHtHGrVcaTByli6c1FhNalYNgPr1XzVCRzyXtDldLVfR1tWZe1Wf42Nt+Dkfzhwf5rMLkvoUwCpn67rOmoWcrT8GL/D145+BUOkySkaJqnH09CNz4LRSw6kL4Js86BLR1RjG5KVo4uyc7DbiuRpZyznUtImcfa5a7HvsVfiXHBvV8dLreIhz1/2U5OFulgTHiGdqWjLLHLnHGl7yMzhj06SJA9Bdiu/kKONL3qvH3B4UuAsFerAWA0X+c1JpRmCNB9/njIIAha/TWtO1Dqji9dMWPIaMSAgwsNNQJAtLowzeMxEEz4ix7DNzFaWr0Yqk4Pm352wukjmmrb6UQ0OTESD3SprZzNjZAWs13SlRNcCndmYcMcosWjJq6FDrDD3rLMUq9EhKUN9pUXTJ3L7TIBomvdGo+7mqWXtKN8jdBiP1YureAx7gB2TNDPoKaP/44Q12sfjOuALWas1S6gy9I6mx0oxWDU2u8MrO/POdGG+iMAzN6lG/8pxX+d1EzFcphea0G1nbnX+ugyDDrkSN07SCs8SfVcr47nzyvdzfx7kz6wCZM+uMS6+89xyuzvmp36frODkim6QcjzrIXo1A3wrWdsHgU9e9+/uvfNyhNsoIGNXx9vJQVMj9mVfAmuZZshCe2sl3d40v7Xs1LVdWk2j22xDFfml0fsznQYEXQ4EerNXuZ1qyMxaALgAsxq10Scagi3qr0ZU7odwzxXjR2COpbhTZFaCGQGkNzRA23DfFQDgrok0Ewdwzh+ckdt6nxoMS/dIX0jVn89pRWn2zD/uoTs37d1I7dw2LWmeoiFlaCzAoLYgB87e6Kws0d1HDKEVDh8S/2C0ygEKtDIDbf97T5KlgDc9J1zLfKDPpNwwuHuodBXfVqBrta4z5s1TJ0e+ugDW/l54ltbSm7XFqaLYjiiOSXIdIj/N95qXf5ZWzcxaw5js70cznPLN5Nt5GJw6g9+lARbodop3ztLp64t5grQLvK2BN4wtrcfZmEUzGsj9XrxrhIKMHRInP6mFXZ/ZV7O093+FOQNkLxplhfPWcXJUrV59/TxqcPQsv6ZjpjPijfvqsjje1lZywQMYHHA/f0Xu+6qy9k8EauaW8IPVq5DoH2GM8KPCgwFtMgVHr/hTVv99hWClormBN9EqeeB89YmBIw2MQujibYS8axhgEJICZ3ZGLmbU591wCnTBfNSSJN9z9WVKYnnskbVTKkXUDBatardWcdpRWD9Yocq32dXPbSQ3ZMerMM3WG6k90wnvvI/3J/uRCcN3MAgIYiFLC3HkGwPZ3n60ibz1tVoZfUmJmwC8dLaXdcjwoYL86rhpVo+ffEgH0nKtgTbrxlzpqT2OMi3hzmvTRVvvkfPreGcC/h5H40sAaucczb/0cTuRFTc3+AodzSKof8LMaLwWsZa/I39k1EhwqMiIAkN3UKfRyFqWk8+pLPZ512V2d2RUt87k6TKm9n6mktXMOyabgGNQZkTzaGRyNHBPOMrnEmQRYkEeAucGp069J+q5mStL9jTPD+Oo5uSpXrj5/hy7P9Z00BRs5pxI11hG0po7v6D3zfWlgDQ+prcePZCpdeTaAW5lLI7ninAGiBltidMZk0JBV7ng1fL/WhstekRbpnOtYysFw1THDSeWPPZLx8r5Ho6NZlNxZ1V0WHfxxfZL69czf+eN8l5ni7O0MziG/k4asGytZpdnSrNYa7dglggmaJHnXLPJqr9iVhiyXs47h1mIeZNHfP5y8asi9j8NBKcpOJlW/HtFkqaxnwQeBCvRM5168le7d9pnjjFyTjj5q7ue3ykbMH9+hffaQ08SaOM7pC6neZw0CR3tGJumgbX84v2UOsfc1p2NzkJ+VD/IM7zYvdoHfk+nVcU9GcKjjP0GCWUkPe4ccVSKjq3Gy+Xb4y3d008Yv3oMuMkZWAYTdZ9/9eyOwRuDwzFKMPDYOegVro0ux68QoP/nkIm8uD2UUzDrUzRYkp92FpAqp1Qj4/Y5HXh686NtXb6194IJa1m6tGPWqMPPoep8ZDz2QpJbBQX5KKuSO0qpgTRSR91dd1+rqhJAkvxcFm3ng1Wqp06I0dKNUu0NoSwvDH9bMaCM83v3ojkZw+S7hR0D0iit3kvl8Zz9nhh8eI3zUS555WfP7qxGtyjpXjaoR290TrDFePY+Q2RkE0r8cdLasNYNntZv3MBJXYG3WYGVnfbd8p79CgWIPYEuzFjxGdu0o4pcC1nK+KLvZBe1xYDBkNJqhpFdt0JP+SCGvIo33AGt482cc0QPGDJ1jTRoaMdrIIsBJR9uz4axwYIlCMOT8lrNRqrUotKZIjEH8oIFVf1k7Q4KhEMOYnCNvRyO0pzd36jKvypV7nMNbzsrV38hcUJ8rujaq453dS7mj98zlpYA1/IKH8CUeYtRz/HCEftAJ0TTGAoA4i3q7Q+oy56fB2Uwm9UP2TIxXvAb4pckKJxP6oD1+N5SmmOus2Vh9vt97Jye539Mb1mbQ5VKb6+DEYAfYU8a5swXkya5igxlS75XFOIsyONho7IrZAEx0Jvd7IIAhTiaL3gKfbEPrNhj9nu977A09EfzXHPATO6UfzrLAgbka6v9GBjr7kHxBD7QA1PwbXeb76uXpBmDnLK3/ynrMBz+hF5nrvUCNOZKDHLFAHnpzzofGspzcr6nhEFkHqAMy5hjA60zmrkjPxifAXvjEMzxv1gSt0lG/CDIO70l1xifogu81fAvd2RWJANsrTnVAjiwLCAZI617hQXpX4CXDudC3IgNN2Z74L/xJj3nXDmATSKLHrCPXV+U5bHh68cWNEVhLl0eRFH9W96zVRWEMCpAy1XqaxyeGgJoZKJnCPKtjSFdKkT2HnpDYAWvx2Dm4M0Mlc7XuXE5McKxqvEYbh6mAUQdfhI1QwcAiOJT6rffw7CitCtZ4mhwAzMvrht6rts4rsJaui7+stPUepV5SAvYbYGJgOQQOGk+FgwxE1hGDg7DbqV3qDT8GtOcSMp6tE+YOWBulkuEBwky09owfrxpVI165J1gjXCk+Z2kEJHjLnD08vdv2/Uww3bPBCM/VDKSTOxQ+pZR0ql2BeU+wRJFxFImQuzdvZ9zz/d6XC655gM9qcygaI57hyECKe+SwqpfdAx0a3px10yMHyDTGAT2wU/O4AmvOHdmJtqMrOyh9ild0gAMqHf/wPb6mZI0z4ORzssG+UMLWygjmmAMmOB8BMU4cg/HHEPJ5HWRN7qujg8iRGIo9X8QhsXvx+1W58qaAtfBuGk71hmzWIeuiXpa9o/fQ/KWANdc3kFeAge6uMXrpf4b0aAA2UtLZQOpL+zR8TdrIHQPdnJM++g1AiIwbIsvACwNVkysdIRm/eJUxnCGqddZwzJmQKeOs+T1bgtEKXNHnegaMzpzf0MnAAZ2cQa5w1pNdHMKijxmiQMDY6Foca3DG3f8oIujvAACAJcKN1sphZA1YMycLZwyHpPfjLcP6GeKjTJoKiOlQtBlF62RLAU32CA04wq3Vvls32VzByGi/gWbOa+sBhjzHegBPtm2ALRsmIMO/CVLQgX4vi8Dwe3sNqPi76GEdbC7rJuucQXZwBgBGlnO2oaVSFraPJlB4OGPVVZS+cZUUHiXHNbNjn7N9vRNIA5jZJ4ZzoW7ZsGb8Sc+zV8MT5kwWinA6E8o4yGw2WUqgONHoM/LZZ+xu+sH865245PVZQyu0YzfinzSHs68CDrJsBCLsN4cI2+nKQBt7kEyNK79dfRctPmAE1vof7oA1ggpgcUh5hBiK/QEgZH3Os+QgiED1w3wIO0XLGIdXQRg1YA0TEBwJYdffx1vu31bd23rPukN5BbDV2r4qnAPgCKqdO+FGm7SjtKLoHRq0ITR46RwYwoFCAHZnIGQG1lLHQ4kybmrnwh6smbuDx2iSpmouvN2MMEITPxBqVSgn/ZIiqE1oZswaWjhchBweEsr3e3O1Z3gCOB8J3BktA9bxIW8Tpbei1W6L7dFaEsW6Un/kOTFsOD2cK3SQ/iDqMFpvmomgC0Uk8riTxncmLO5hJMaQ5flj8K9qwFbCq//8XmAJP/Pg4bXdKLW53Ov9WVfoRfHNwBqloCaToeXMO2dRQM4dxS41pI6kuPu31XUEvpM6ZPK9TxVdndlRY5bIF8YgviQDesBWL/tlmDLYMhgYwNO7nXjEfZfiTRSATCKb6vm2Lh7qjJnRFYPN96SeMdSShtSv/wHWPpQiqeNmuI2a3ESP9B1Ld/ReztpLqlnjIAEkcpl8jWBUHuHwYEjiXbKZYdqXdfiOTBY0MkRHKlhz5n3OPjJyPkT4AD2fcTRx3phTABtAAwCMBoPYdzkuGKrOZI181fMoY8jz+2HezjMjPDygoRxDXQdgwCkGvFRqsqTXt+w915ow4p01UZM4Ixn6wD15yNELYInm1AFEkMPGLEpEjjH0GePG7H46cwUWAQN7hTZVZ1mX+QIWMrlGQ0YYWo3WI6ihC+rZejyTHZkoDzlmL37PAQjoKKDXAOwBQjKNbYxP2EhJqU2trXVZs++xe9iLwF0Az2x/vYPNi0/wnnfTk/a2DvqI7WEAiOy9GrQwLzrAHJRnGBxzdBHAby7o4tn2KDz7wcd5oePoZVFRMh3AZQ8G1Pk3sn806A7vxTuCGezTOOJ8n4Ml9HS3sGaBVwbw7gw4s/cezsq7PhWsYX4GJMbFRBhKuHg0YtDw1BIGo6iAhTJECRcMFUMxYI1ix3CQvNSYmkZgszET9P4cndDqmng1gsitPxdW5z4rwoWxcssdMDtKawScMj/emPc8vDiA7giEjMCaQ84bTfACmhUM4BNAAzBlPPWRO4rHAeI18z7PYEDyJFVQzvD0nd0LpEMLXhfzqa2e40QAFmfgPK3S+9b+FaxLgeMBmgG2qx7wM96/CtZiLFPwPHGM8LNLY9PNVXRNCpLI+FMHhU+5Mr4SFZfGI799xFsAj+huTa3zfcrb3HfSCkdzPrvv7l5gyV4zyCn+K/O81/uz7hj+ItU7V5BQ6uYADOeM9cZwdTAB/rNujpmDfWQoMD5ruvQqDbdet9E7FHonmbTpHrBR2DEy6AL6og7/xstK6Y7kawVqjCpnux/OU019qh7gfJd8YUgk+sYYVns9Gw+w9qGUSd34yFng89xL2X++o/f8/qVE1iofsHvCZwxYWUT9AEQYwwZ9JWVrxL+ykhjX7B+GcQUJjHzGadJyw5t0A2Ag0mHQGxyoMWLV/4zKQjj+6L08x1lzvjLIDM+WhWT09XH5nvmQ7d5H11onhzEnI4DBiQ3Y0An0dW8/kAH+ADZ+z56o6Xjem/RjkTW2VU3rZJ+wdTzbmNWWRpdn3rNIEtmS2roROIz84AwNOKn7zVEk4yjrEfWrEWbgJHWG5s2GHKWpWmvWhKdkTADE/gvoc8bR+WxR9lYGOQu4+55BdvkcCAZQ8Crdbd/UmQWszfaX7vVb9ot14JNR9Lh2KbWP+KZvXgYziOwBcgaHgzMjXde/p1kOWRuw5jxYP57iHAG03LksklUjYGjjbPUDXwKB7CIOCc8WNMrwORAfh4sziJ+vDGDNWZGyeu+xDdbSZCL3UiE+UCVkLvKFUXg9VsWJEdIzg5VyJNBscrzaPVg7q5eLkVLblt+baJ5XoxcaEPBgVKM1TUcYS6nfujKPHaV1BtbSyU4EgxDoOwCaS36faxbiqSAQR2CAt5QQ98dhr9Eyh4cXxEELeMb8vktoViWRO+RW99ERDgxVUVSpEWlsUGsfd4yjHVqu9uZVg7XUUto7vCQqxxgHklcAItdnUBSA3aoW89a6TXSlCJxXyqzyP3o5F4z8Vcrzivb1c8YdA0fEt1f2I7AEbKgr3b2PihKhhBj4q0ZG/bx3wBpaWwPepkjPUm93ImtVNnKyxPCL0+q9Wms8hIkExcHEAztTylmXuUpxRgtnua9tHV3xkd+u0iBXe17BGsXLcKugj/Ei4mUdvT6oKWK869JiRs0DGMGciwaj0LP6OiOGjBpd3m/DPM6aI1yNQF+VK1efv6Lzc31OxtM9o6ZPifySD32a7q6sfolgzTkLyEm6Wk1xZPM482wk8tyQplaju9kPaWl0puelfi2fRb77fxEfkQDGPqO9OjXS4MX3pO3iXcZtHfaidpUkL8inel7oXtEIsnEW0fLMOi9OPelmgBlQEh3EiePZfSSdI1AUwzsAAXN9/zJRjj7rSzRsJLtETUQ1chciw76P+nik9yQSNjv3vlfBmv+nd6odJeLGEYrOfdpdopxZD1unNtdjL6G1tGtjJovZ1oIP7CB2j/Q9ck/EEfAwgGnyKcGCkE2wgD2WyKo5ACi+b0/jSDUHQMiQUigCOkrzrg4wpTHsktGomQhsNrToBz0k6ytyFaAD8mRk0WMZ3kOOGGkEhgeqAwNYTqTXeSDv+4Yt+AcdQ2+BjETQ8i7v8T5DNhkajdJ0J8v+kH/2HsAdn997fEht5iqyJkrDM8LoEXK0KPnBCHK1McdIGGMqhhGDgnEAnUqR6S8FXtWs1XbAO81FnkLMKE1Cp0bV8szcd4YZAcer3WVCp7OLnnNB9ewOqNy3REE4WH3a2VVDIQCUECXsNFM5MzazH6JWDD0j9TTA/6x7IwNbbrXD68AkJ3m0ToJIlI4QjUex39ddA+CMH67SavSsnZo1KQkEsTlbO/7ibSJkCL7ZGvM+v0drimQnqhuDHGCn6K+k/YWu5kgm1HS70Ivi5awA6HqvIeNY+h5jeOcernSHJfylo/b1sCOwxGnBwwnY1drZ2V6nwHiUnr2SFyuwBqBJ1eW8QLNVSuEOWJtdU2IdDCz0rbW7OcMzmZA11hRhvIGXdptmeMZTwZr0IdkRGaJvjPsMXmMKngKuQ0THOcEr5AZDsRp99bvSbDgzjFk7fjIqBp/1p5vdjBeugqmrcuXq81c8+02f76UAACAASURBVByfR8bz1I+6kSbzhA2BT+pZ25XVM7CGbxlznKR0A97FR1eNrlvoQp7FIKfvGZRZG9uJA0I2kOwCfwxOlVFdDFnMSemZ/b2eolOJPNB7zjiHBVrXockDehrAo2yBng41vZGsdqYY0Rn0tLMHPAI2og5qjkdDBCRR5zS+oMNm388z7BOnSeqmRtHrpBz6zSztsEZYZvVqQLI9CkgQeaRv7Us/+sZCshsAnuo0IlvJh6rb2LMilU9dj/mIAqkxM+hJDnWO8rPoftZRZZc1A3fmzy4kGzMqD4icccD2QZcKps/kIB0nEyG1izMQWoEwgEX+2j97ER4lw4FvZ8BgQwjGAOHhKeedLuNgMGYprRzXaawyAqTOKllBvnJoeJ55vbhxBtYYzYwi3h0KdPcS4dkie2GcboOEibQcm4uwlVl2I2u5DFtYv1cC/XwYcekAc3VD0ikOYJlFrdDUgeIZI+wI31XUsc5jR2mdRdY8KwZbCn/7axMShbS3KxBQu14SArUGSoTVWnl9eu8Ow5pXKJ3R0mUUcOwVuagqZUBJ8e4waHlN0JLwH4G11L/JU55d07BDyxUPXDWqRs9bgTXCnaEZ4WQ9Kd7mOQXaRA3Q1N7VC2jzPjSUBjC6iHY0p3yfAZVmAN7F6MWvPEyzLoGh6+iKjNBrFg0MPzGsKAtrW3UjJEDRx7DfvLc1ajgDS0nlo3wZ6LO2zzMeQE/PzoXts++lJlFUevSOSmvPACLOmnUErJFTs3rMGV+mG59zl1SzNG2yt2eXfAeocZY4f6J1lOBu0wxreypYM1cyJukkIqMiFzVtpd8HjgqGQs7PWS0JfudciKd19t3qTWaAod1ZR72rjXjicNuthQ0Pnd2ht5Jlz/15ZDz+HtUk53NRzBr1rXyzShWfgTVnVSpTIleeedbs4560oAcTmQV8GJ+JUDhL0s4Yo2nG5d3AkehHHXhfpMaZk5lQRx8hEJ0R/aUva/1Wrev0+1ENXa0B8x10Y39FDnN4k99SnkU8RCIAhtGoZw+oQwfgQCnLapDp5JHht9IlE20UgTEHUTs0df5n9WE1/W5Wr1ajMN6nFKfvblnnW6Nw/p2eEtU/cy6mrjzrqTVb7GeRl9RqkS9pJjOiU12TDAO6ANja6axe03IBPLLUWagOrh5cjYByz0vKA+Lk6ufMAQN44UlzBPbVmvWj1hb6fjp3VscFWWofAWsACl+yMaVBZrBxyfxEU0cprexPsjvpwDUtnm0gQATIOb9ozL695XqnFZ/f5fMZWBNRc1AYUzwQad3v0PpDQFwdtX7IwWSgRrBSnpipN3R2wRpDnzcJ0q4dpvo5xngzfx6q3nO1WlPeIzf1DIQlusYgBUwI350IgvfvAIwVWFtFsfKOCtZ4GACvHgjESGCo9LVhMVLlPUuLVVuWASgyhPw7gyTRPqFyCremWyTV1vO8w97w8jFU7evIwARagOE+zaDu4Q4tV3seWu8aVaPn7TQYQQORMV4kBpmUx/6eNXtD8FBeFeCkfo/Bgt9GXQyTqkIJnV0tAUyZgzMqMjbq2HdmkK/AbYCXdRCkeO6s62IFGrP0zrPIVs48A4QBIcVo9yzay7OUv+z1KrK24rH+8zPHRr57Rud+rykh54gneNZ6P80/GCQMbbJxJ9W4n/tTwZrnkRnSVTJ4ROsFyv07yXz6ymAoUNJ92leVS4yEKPBReiMgJXIRQNc3Ohnt59XI1+qc9O+4+vyrPHeP76eBzcyBls8ZfGyKW2T1DKzVuqY8d8cZeY91kxEATxwMaQfPxgFy8KZ0Ld9JJADPyiKqg3wTeRhFfAAn0Y9EhmQ2MTZ7EEUH1HobPFzvkPQ+jmRgOQPt6Fv7Q6/SqXSN+aL3mZ0kUgicAZPOKd1kDX1n1Z7O6r6Uz+QcAq4iJ2wnkXSROZE3qceAjbnMRqXrqF7NM+maRDU9xzrVhM2GLC9yonbVPJMDImHokPV4n8wqoKJfjzmyVWcDMAPGc7+j6B+Q05+Z0e+BZ+8GfA17R/bXRk3+vYIr/z/qGFoBY+3aOHov+Zw1cfTi8/4aAFkRslzsrZEO6hWE+fd6lmXGyOQKyM271ZWlxMZ7dIfsO6fSd3SfgS9FDtmoHEL0IPscz5qTva1Rx5PteT0f9WAtnlVeB5NXjyVaVe9Zk7IIDUuF3LmTISu7xXDeAWsOiRQuh39lUFcPN+/tlfbcvAyMacLySgtrhwXD7FxWjVY7dFqBNc8BJnnZR10uR2CNcOZxE/lK63RCw4EFAPqUzkRIeBF93oeOE90jKBxGCprgHxWeJyVPzrIobi6znBl+qX1gaAF0jEp/+gtAR7TMu3iAKNFVmsxVo2p0kleRNb8xL7n+BFjARA/WZlKCcpVqw1M4cgxkrwj/M6M3z0+kL1GNXgjeCtacHTKFM4inTPrMWR1ejVKf3QW3AkvWD3jiYU1q0GhVz3dFIq/ef+VZvjtrb16fg4aMsFF0M/VpQIf1OsOaDPSR8TzP2We8MDoZcjkTrwusmVf1uvt/xiTA3TsPnBke1hSs8yTXNuI97avHfNayv3p2/Z5S5+k9G9kz3wN2NXs5G1flSp7PMeb5V7I1rvLfrd9nAJHzs1KE1FKNapZ39J55vcTIGrnGnmCDGLKGRBcZgfSg9ZKl9GDuTusbADEkZZE4hz248kyyi52TMasdkp2SqBydTOZXI5Qdw6g2R8MZEAFhvAMzsnDYKgDFqKau5w1RQ9/NwJucfatR65t8F8Agp9kTbEuGuEwPYO2s7pgtCuiF9qN6NTItVy1411lr/zpvulK0LADMPPApINWPmm43Wg9ackCt1uO3fRqmdEige3XHsd+yh+1hskHwgN/2crOmI47koGw1OpfjyxjVeoUG7ETASOq5MWvw0kd0gTpBgv5utBqhxLvAXZ8yjM/wkDFKZe/fJeLLgZf753LZtnW92GhaZbIK1nigMSJvj1ogCp5CWLXuZ3yLiPEqnHmsd4Vxnd8OWPP9mrI5uwy7djeT96pjJK/UTgOC3D2HJgDFTn1PrbM5MzT7Q79Dpx2wdtY9L+/oFUY/l1yGi6HxRY2GMRbxSToN9YX8ScdiAFKwBCahxxs48nqjse5JVSDNQIHvMfp9FyjNhd19GtqoG2TtSFe76M2Uy1WjavScHbA2+t0OWEutmt/PoiYEMwV9JYUqETCeKAo5Rc3ecwtYy/nTIRTfSUlYAabwn2L9MwfJDliKs8W6GDOU69llpjN+ONvfsxTDK8/LvjNWopBmcmL0ztr5Mb8T5Sa/Rs4JZ5S8osCqDH+dYK22Os8aRq2l+0gCD+zMa82QAebS/WzWsl+Wh6i9gf9lYqxqGRm7qYtZ8bXnXpUrZKc/jJczPctoTQosvcywJKNv6Ux8hWc5dTkGNc4YlSLEjjC/0T2oO3rPfFY1a9Kd6R7ASOrcyhl3ZY2z7zo7wEYAkKgVQAB8SV0PP5J7uci9GrQAnd+r32KEjkZvwI6aQfQRGesXpa5DdlBtiqFRBn2s1g6QEBEbZVOM5tTXDa2i2nkG/c25qCGE4WzR3SJtjGp/F1HZyYBY1auJonAYy97I+1bXcNS11rvv/DvaifxUu/Ge6/GOZCFlHgB47fZ4xrPs03r1AgedFM5+VLAsMkluVnrX5iN+exaJlH7OWZG7BmfvrF0wPVNqeV97zJ4hs3KWRiCxB4ejlNLUaGfdbH08LhBgD/H5ju2/Kx84Gsg/OvPegy3/HgFrlABBQlAgFGWV3NgVWONVEnFy0BX0zjzlu8K4LnQXrPkNAX12e3lS7Wb3+8wIXDujEbRX7mOD4gE7aREOkEO3MhB36LQD1s4YJp05z4xLtX3Wqw1w5QfPDU/wZp9d2uswEpSMIu9apeD1c56BgjRXALhFSa7Qo6YM8nImijej11WjavSc5wJreNPeAEBoRdn1I04DCmAnqpbfoxMFIfrMS1zTK28Ba0khFk3bOUMBodI5Vg05dsCadTmPhD/lInIjFelqHdvZ/t4LrKUe0/P6u9Ly/uwBuTa6okEkjUGU1GJOkpmnHIAVPe3PwqsCa7zAnD29YU1h85rHs81hIGpTHTq1SB5tyIZRgXjf/c53Ry37/Xs1jEeGzD2U8T3kSj8P/E3GcoyhGxnOQMr1Os8J2Owh/cZTzgBjD2jMkAhgdDlDeZSGvaP3rPcldoMkK8mTXDkha4DuA/QTbTD3mq6Lr3wWgMV+EUEY3eOnMyAgl5rMWZSjT20bGdj9eVl1hj3jdamCIsm5SoCu75udjH5PJrEJkja6Uw82m0elaV+vxuGDbspW6L7cAzerU/X9Xh/ga7wc2ptHnzIoEkZOZz2At0jpqhZ7tqbaSIYdDnCOujSOfl9TQoETerePyAEW7Pxc2TBygullkNRJDiKyeJQOy/nNqRg+P6tXq3IVTVOPWNdR02rZyuRJb9f0fDfi4T5yO2vrfw9Z7hnmhKapobvXcz3nw1r3Q20EJXQqrZGBUG+7X4E1DwuK5a3um4T0xsWqgLgu8gpYOyNO0q/cAbcDmOqzAvJsRKKNuxvRt8DeAWw7SusKOLnVuEzkjIfZH4cwHuNEXShOxsHMA5baG6F0B2/nIt463xkoEEESaUmU7go9dvi5zuEeRtVzgTUREQpS1ApvqS9lkMXoxX9oyJDYbedf157IFiOQ8AaOGdVXwVpAEo/WTD7U9yYK57ypX5zdF5jf7II13w9oFF3h3b56pm89T7syw/cYWeg965oao5XhNavZpDxEUnngzxqaMBLV8jEAe0PlVYE1AF5NrCYA/RC9R4+M/qJghl7qGRg0vOcjUMJ4puM4ARgrs9bdvWFcvdo+2406rPb7HnKlviPRVAApdzj5nAwQadN1mWPruQd7glzCu1L3GHhSpPCj9LgZONjRe+H7l3QptjlZMz4ECAxOD04yfFmbe9UuffaI/oqjTfreqDuk5/WpbbM77KTrxnarBraoZ9Jy+3S9mXOj563RFRh9lG42r57nRF/rZcmzu+l2ePWsXk2qqKilaGvNDDFvqXPOTNYFJNCh1tCfcQ6i6jTrM5I4tGVrJfWQkyz3o83WgGdGYK6vl5XiLYVzZ/RNN5QvSYPvhzIHDj52MTnIPusdXPgzAGx2ibvnAud4yvk26j15lb5kJ9CciBlbwr70o147AdCZQ19uVfm8yvzK5/UKmFW9XeYw25Md2ls/Bxnevvf4f+5ZS2tpnoH+Pqcd4zY1EiY665K4K4zrQu8B1tLBkZK+CtRiZBKiV3+bddT0S/9GMFGefffEfH+HTlfAyYhxdoxb+07pSjPQuUpY3EHkgY/X0ME6i0xYu+gcg5ihwPC+EnoegQL7KL2E15KiE8m9Qo8dfq40e1UNRkb7tJMGydjm2bQ/jBheP2kkvHuMBrxGUc8aj5wJlppOV+/augLWkn5IOe8AtTg4pKhSNCugZv47/FzPowyCdEG9R8e4K+9fCfLUYzLQzE0KqHNUOxGuItup0bPngLsmLTzZzl8vdyh4HbHI/f5svgqwlohXokB9ZkZq80K3dKjz/7y6nBW5hFhzIjU6/T15IpW+p/YjDR5mLft7wzgeWalOqUfru/it9nT0+ZWOvDvPJxelbInq9DWmaAhIjDo07jz71u/gWxEJDRYYXSKkZABZwnFax47ey1l/aWDNvKpx6P9HdTuabqV2nWONHtM4wr70TRYqbWpqG8OZg2bUFbBGEziX7TkHqwwJNZ9kgHfZg4xRY4n6bvyfDq09H9T3eb497u+5GvEOsFA7BSbKOOOzlKGYdwU4ImEM+tH9amQnueac4f9cXq0+ia4kB8k8cof8FnDgNCIr0jI/83G2nP28p09LpH9r3dNqPfQqRxvnRe/o7oHf7M64Ea0qiAFwBEZGl0QDkmmuAsQCg2rl0Up01vnkoI+TDM8BWX2dLN7gCAaYIlfr/WrsPg4yv6vpquZWO2VmLb3TA38Bxv0A9HIHITDr3fQjenJMSju2vjQX8Xvp1/2+1ueaTzqb3iLv0l0SKL33wCO/oNas+XtvFHjpjnFb20XPOjDtCuO60B2wxjsgVUrhdX+fmGfx7gml8tpeSXnybsIUUAMKVumLZxsU4ymtYh0gh1Wkofeu7NDpCjjp55U70AiyK1FOeyzq6gAR3ob5815RAqOC99rlkYd1lc7Wz3UECghe6bZSOSk84wo9dvi5zuMeHvDniqyNeK6/r813CF+KCHi7mprhbKUrmPNg7II1dY4MBQrcf3fqR/CMuTJiVpdHZ/1XwVLt1qpLm/N91pZ9JXyvvv/seXFGkGc8o86rcyeSTL6RR0CUrry8o6NrMChJ6UHkDeBu3xjNDLi+Cy7+9nzAuN+fVwHWeJLVkTES8FrfRY7xkvRNtTW+U1uVVw+w2heRxNqVFnjDT2phGAMxKmatswGL3A0pjUikjt7wDN5TBsBOLc2KZ3KG7tWxcAXWONz6LryrOd7j86RqM5ZFPBlNdCkw49+ik3f0nvnM0iDZLs4C5xSeYrjRTWcNjO6xvjyj9+Qz/vq0sRpR8hlZLGW0dmYczYmjU52fIZUsTUrqd+ln0b102gPa0UrNGnmA79Vt9Z1WNYQha0fDOzm1RN09rw42jUhJOqbWtugrumpewVmS7ozOmXNbLxLPM8gFwCHOnHovWr2LTCSRPePspzEIGei3tVmRtEiRMmtjA7ENOQ7SsIKc7YGzd9vf0BYord0pyUlgrq6HHhvd4UaGqLf3TLZp71iq8sdn+Gg3fblGTTnWnfmRc5w+yMXQ/g7Yiq5ZE7oAwH06pTKKCsTpDbxIp1hTonD0CL3lj1R8tEYHTvsAr9n1Cn0HzlGKv3NubtJMDWumvzk0XO1g/9iF9S5N37Pe2mE4/EU+OU/kMHtFCuqLHGf3rGXCu8atKAvDZ5bqtiuMK6F2wJo1iOzxkjDCeFApf4xO0TuwNrM/FGcb4r0Oufo2CmXHyFxtMC+QZ9WcbvVsIghSV2JE79DpCjjp55W2/mnR29/BNloHI4dQM38CnyIkpClGnoRRA5WAKgfVoaYw/L1vVnFGtx4UEHCMfoZ1omp+f4Ueu/yceb1pYM28OTDQKV06RUh5tUUE1LNQlLtGDHox+p2rnKEdsEbwiehRngrdd5ou8DwzHAhgntpdo/gWsJQ1vLTIGjDCkKVAaqoQ48jZoVRSwyV9saYh2yvnzHUINX20vxqDTJQuhb7OMNk0MuSfE6xZjwi9SANDiNd6ZPDVFCRr7Q3b2v0O7zM+OJQY7NKddJfFt2ovgf/U14xa9vt97dhnXuSk3/ovj/Sq0chKD+Tze4O1l5IG2a8/vAdw0B9AA53X643Qgz4aGe15rtR6cqWvlc61ADkbt6Td7+7d6HsMwTTzmDXuYqfgwdQ2sS9ENUYphnlHf9fVzOgEapzptJon1/CEKIToDOePIf2bA8dzDY08yGo6mn6WSkZfADL2iiwaNT3prxIAkNgBu6NepO03dIR3Ahfkki6vwIZ/EwVjV/bgpwJPdgnwA3QABviN3iJnzEsE0aBbRJOACbom93fm3I+6JwKX+JLsmEXvV+sRmWdDZT1SZEfBhXqhOWAJIO7oQbIfWPcOw3xGd92hB7CTZiuCBvhBCij7PY2VgHM2Vgadgabew7azDo5DuobTPjwNdCeaKQJM9rI5rSU1crP72mpjFXT2+z5Si29lDaX+EI/gaTKfA5/tbzgHnJlpJiXbgOPBb/GRdTiP/g0tgL1XkSa+ez7+v+/dE6wRvpBx31EsL90BIf0Ed8BafmMtFD7lLRec18dhYLSehT/7d/KOMBow7b1bfKORTnQMiDqEbgl4wnZHaeVC1VsaGoSmImGjrlw9PRhyDqqD4DCLaiWKRqhTBj6r7Zhz4XmMJCkC9gRd5YPvXobcgwKeGp4P3ifeuIw3EawxKvABHps5EnbSIOt+OQNoD5BxVBC29osTg1EOAHiv/Prw29VIm/ftgDVRPMoCQOyVTe708m6K1OeAGoFJSVy5/zAAntK4ch4oLXykruuKI2ckbG8Bi97vHADOadUdg5tyq86IKuNSg0gZ+07OYppEUda5p7DSvQK2RDZEHji5GDpJC63rey6wZu34zx/0B9rUezDU7COe4SATiWDYO98Ur7X1DRgU96MfWZTB2E9nMl5iBjHDUwq6MWvZ77NqdONhsss8yLd7tni+N1gzd0AGoLVOhps0UeldIg4M16fy+VVDgy4VRdChObWhzj6DWmSTgcfAluq8ax/MshTwUA8WrsiDq2vrv5/IDCOT0TnK4qkt/jloGYmrdux9t8PZZcP1Ym5zk2YIIKA7IFYH8MapkRorn9GnDFpnnsNIpIrtlGyKfr21Y+rZeZrRFRjTOKLW+JBDIuvOPjDI4AZeyOmRw5x+qXePkWvkIIDJwRLQByikVgrws262TDpzkrscM6k5xLMiM2wVzyOnZWaRtfh0BErRmoNxtR5gHV+OGsn01xDMGiCNaApI6niYe/hm6a10C9tYyqQRerAT8EoGWUI3ATQZeJvsti9Jd+QkQA98anBmafQHRKVhVX8Viu7d9S7APJ9MSPbZLJWUnJdNkfeRyfbT7/ouwLW9v3fQC2wLmRq5qgIY5AAcXcfwVJlw19/fE6ytJrYrjOtzroC1/E4UiEeVB8VFeTYHI1LCZ5feoQVB6GBSCLNi39U6V59XQ8Wh4WXAuIk8pFPjWYpiwMnojiXvlxIhJMzAcMAcGgKVAQMg8NbUGqTRnBnBagN48oFJ6RKjcLywNK+XAyAS4O88dZgfHVOs29fu8eRQBnkmIeMQS3VKM5N0KLUOxhrhai2EaTVE3zSwVkF7jUoCzwQ2xcn7IwWC8bW6YsH+BVQTWoxX+4WvQqdEoP07HjMotbpHK97N5ztgbZbeZR48bwQz5SptIndj8XrN7o9iRAAhjLLcA2g+cVz4ewy/3XXc63tXwVqVATU9mLxzLhgh1RlR54kO7pBhAAdoJ5LqjHFW8ZaPRpwo8YLmOxwu/vSguoI1TiaysV4SO3pHrsvor9Go36175t9FyvGA9UjXlObIOOP8E3UQFZDeMjJw/N45Qbd4W/0bGQIE4HcgsHYic+bIqZHHmg4gl2PImpfzt3tP5i5P5QzxCN8zPZERklRBgEHEgMF9pQRgdw1n3wuv0QOjWtV8bv33AGtS4oBUoMW4er/pU9fMoUnmiXyNWqV7Pp4STXNGAKaRwdrPgx6XteQcyFKgI0bAhRGuTifpYRzUdEEiav1z8Z/z3MsCxq850rFn81MfKcJisA8AqqsDwOEwot8rcKQXAB82ytnl0eQewEceGuw78049U+bDIWWt5I7vsAdrcwvzEB1ig5GdauqASUCaDARc2B/k8hlNVusRAJjxhrlKEbaHwA6ZyP7adVwCR+myTN6RbzNHQLLgchWIeZGT/eBUYSNUHmFP0t2JwIlQAbppgkJesjHrvPEaGYq+6E//9+mZ9p/jDq3pMU66UdoiBxQgl/dJqeS0xC+j4fw4k1U3+J6gkt/KEpv1j7jKz8/6/R2wFoVtIoi+8gQRFg4RcMDgxPw2wuEQtr5SJ3ULWAvBGMQ8BQQWpgQaZhfi5o453hwMf6+OX7PN8z4CisHVezt36psCTlZGvIPkwBNWaJlBGM4awTAkeaEZxiIwBCaP2yoU73fo6yACVRRnn/oGAPpOCpzNQ2TJH3nGvEO8IQETUQSicgQoQ50x2hv0oceZgZi1A/OeZU3hZ/UeaJSc87pvMSxXF66fHVQCCP2T4hODNr9JV0JKGGAlOJMff5bO4/x6NnrxDhE6jB+ep1maoz2gWO2Rc5Euj86LM7oyxs35zCBf0avec+dZhDqe2K1Pc3Z4Bc2fMyaDs0CaWk0d3BWeeAIN8a6/Xx3Z3x3+8+werDB2REDwN0By1mG1zi2RVOeJkeLMrdJbK6hPyhgvqfPe1+VG/uLb1AIxCgGhe6SGWwtwwShgsNtb/89rCqgxTu3rTttq33euZVdwADEq4gjqLwJeeawZTRx+PNWM1ytNkXZ5J2Bt5TTbfd5L+Z49BEQYzGTRWXYK/mIj0IG7zlxy2j57fjUInQV843Npa2SZyMBKb92LbmwHBvLqQmgRGrJuh6fNjQ5P0wKNGc540XfxPxmgDmtlx6g9dzaUNDCizcle7KT6kmGRH/bwKZe04wPRPOuUoigCIsp2lh6afWNririji2hlrVete4s3OLE5Lfrv0ImyOgCQNGSSmeI3aMgOIgd265qth25iO1uPuaHtqhRAhC+RMe/aadaSNVob2W5Yw2rvgRfzc4bOMgY0oEILthGAo/a3t1nZ9+xZ72TT9noEfZ1JA5+Mavl85ju+a3jHjF6+Y288y9xXusgaAHq2FRvJb/D7FfreS07c/JznAGsEhpQmXm5Gdu2O4gCetaPuF3I1Za//vfVRugAY78DM8KUoMIc0xFvSwm7egMEPgTV1GqJms3uRMKoDdGaU10czJnlDAGk0YKBLH8hhoGB5JBmsgAtlwiN3VjuQ50dJAhjmW4vGR3TxLoKRgUnYe491qN+zB6mPM1+847s8IJQcRThK5blHZI2w86dvE3vPvd19VmqPGBx9uhv6EOjSHPAIJScSwIOOlivBZQ71SonapILivrcxvrvmq9+rl1zj6d3L6mfvwZeMQAK8Ru6uzuvW70vx5TV3/ncMH84Ra6ZwneWrkROGmrQfhrXUndEdfD1Y2+GtW9f/nL/ru6SJ3jE6Xud4G8Fa0uKTktt3pTyjt/RXRi0v/Rn/r+5TfZ17Sq6uwOHOd17nGh7vflDgQYEXSIErYE2IV67trkfIcnsvrqjJzoW4IVWMBaAC+Lu1ZgBYYdDwfN2r+9ZzbSePDENix2C7MgeFn4x76QtSrKpSsbf+8KitvD/1nVL2hJkZfvZ1JwIXsKBLG8ABkPRrxZeisLzjvDnC9tIUZuD1FrAGlMhr3wGkV+h8r+/yBHEwyLfnKRV9kF4ASW/NpAAAAfdJREFUTKtH4EUUyXEezy6Dn80H6GOgM7AAwh0v5r3Wdq/n2Hc0cbZ7nr7XO17FcwAvslUayG7XWREo56RvgX7LfDkH7H/PR6KsnF3uOnup52RnvWSes26I4PMCP0e0bGcu+U7AmrNHL+YerCvPeCnfTXdSqY1oLQ37dTs9XwptHvN4UOBBgQcFnkyBHbDGOJQfKk/0FgDBYy1fOJdyrtJ06qKAtXQdeqqxwBNPMUr5efHFhE/e2ed9gFQ2xkY6ED1nOBmPCnufGTOMBMXaajNWKRw8s7lz4wovPi9FH09/UOBBgeeggNoTDUtEoI1Zy/7nePfZM6W8AsgaoLypckjnQOm7UuJkRkipWkWWXjWdH+97UOBBgQcF3ngK7IC1N36RjwU8KPCgwIMCDwq8IymghkcTgjQw0DL7rGnBO5JIj0U/KPCgwIMCDwq8XAo8wNrL3ZvHzB4UeFDgQYEHBZ5GASmyuW9IGr1uj6vo+9Pe+Pj1gwIPCjwo8KDAgwJ3pMADrN2RmI9HPSjwoMCDAg8KvHYKqKHSWUydsy6W6nENncDU7Wp0pXPZS2gm9NqJ9ZjAgwIPCjwo8KDAy6bAA6y97P15zO5BgQcFHhR4UGCfAhoHucZAR2Ltr/uGSeps3eXoigd3Yz3GgwIPCjwo8KDAgwIvmgL/F8wtDRMCWwYYAAAAAElFTkSuQmCC" style="margin-top:0;margin-bottom:0;"></span></span>{username}，如果传入的值是111,那么解析成sql时的值为where username=111； </p>
+
+<p>3、针对上面的sql，如果传入的值是;drop table user;， </p>
+
+<p>那么第一条用#{}的sql解析为：select id, username, password, role from user where username=”;drop table user;” </p>
+
+<p>那么第二条用${}的sql解析为：select id, username, password, role from user where username=;drop table user; </p>
+
+<p>这时候已经sql注入了。 </p>
+
+<p>3、#方式能够很大程度防止sql注入，$方式无法防止Sql注入。  <br>
+4、<span class="" rel="21b33823bd13f744ba80f3f3f30c0d95"><span class="MathJax_SVG" id="MathJax-Element-33-Frame" role="textbox" aria-readonly="true" style="font-size: 100%; display: inline-block;"><span><img type="image/png" width="702.734" height="18.9844" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;"></span></span></span> ，ORDER BY ${columnName}  <br>
+5、一般能用#的就别用<span class="" rel="4fba4f0ec1e9284654ac31738e32f1d7"><span class="MathJax_SVG" id="MathJax-Element-34-Frame" role="textbox" aria-readonly="true" style="font-size: 100%; display: inline-block;"><span><img type="image/png" width="120.938" height="17.9844" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;"></span></span></span>{xxx}”这样的参数，要手工地做好过滤工作，来防止sql注入攻击。  <br>
+6、在MyBatis中，“<span class="" rel="5fa7b96c036ef65fb5603ff55a96cd79"><span class="MathJax_SVG" id="MathJax-Element-35-Frame" role="textbox" aria-readonly="true" style="font-size: 100%; display: inline-block;"><span><img type="image/png" width="766.703" height="17.9844" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;"></span></span></span>{xxx}”这样的参数格式。所以，这样的参数需要我们在代码中手工进行处理来防止注入。 </p>
+
+<hr>
+
+<h5 id="mybatis-有几种分页方式">mybatis 有几种分页方式？</h5>
+
+<hr>
+
+
+
+<h5 id="rowbounds-是一次性查询全部结果吗为什么">RowBounds 是一次性查询全部结果吗？为什么？</h5>
+
+<hr>
+
+
+
+<h5 id="mybatis-逻辑分页和物理分页的区别是什么">mybatis 逻辑分页和物理分页的区别是什么？</h5>
+
+<hr>
+
+
+
+<h5 id="mybatis-是否支持延迟加载延迟加载的原理是什么">mybatis 是否支持延迟加载？延迟加载的原理是什么？</h5>
+
+<hr>
+
+
+
+<h5 id="说一下-mybatis-的一级缓存和二级缓存">说一下 mybatis 的一级缓存和二级缓存？</h5>
+
+<hr>
+
+
+
+<h5 id="说一下-mybatis-的一级缓存和二级缓存-1">说一下 mybatis 的一级缓存和二级缓存？</h5>
+
+<p>①、一级缓存是SqlSession级别的缓存。在操作数据库时需要构造sqlSession对象，在对象中有一个数据结构（HashMap）用于存储缓存数据。不同的sqlSession之间的缓存数据区域（HashMap）是互相不影响的。 </p>
+
+<p>　　②、二级缓存是mapper级别的缓存，多个SqlSession去操作同一个Mapper的sql语句，多个SqlSession可以共用二级缓存，二级缓存是跨SqlSession的。 </p>
+
+<hr>
+
+<h5 id="mybatis-和-hibernate-的区别有哪些">mybatis 和 hibernate 的区别有哪些？</h5>
+
+<hr>
+
+
+
+<h5 id="mybatis-有哪些执行器executor">mybatis 有哪些执行器（Executor）？</h5>
+
+<hr>
+
+
+
+<h5 id="mybatis-分页插件的实现原理是什么">mybatis 分页插件的实现原理是什么？</h5>
+
+<hr>
+
+
+
+<h5 id="mybatis-如何编写一个自定义插件">mybatis 如何编写一个自定义插件？</h5>
+
+<p>先看下mybatis的插件的一些说明： </p>
+
+<p>MyBatis 允许你在已映射语句执行过程中的某一点进行拦截调用。默认情况下，MyBatis 允许使用插件来拦截的方法调用包括： </p>
+
+<p>Executor (update, query, flushStatements, commit, rollback, getTransaction, close, isClosed)          –执行sql </p>
+
+<p>ParameterHandler (getParameterObject, setParameters)                     –获取、设置参数 </p>
+
+<p>ResultSetHandler (handleResultSets, handleOutputParameters)          –处理结果集 </p>
+
+<p>StatementHandler (prepare, parameterize, batch, update, query)          –记录sql </p>
+
+<hr>
+
+<h5 id="rabbitmq">RabbitMQ</h5>
+
+<hr>
+
+<h5 id="rabbitmq-的使用场景有哪些">rabbitmq 的使用场景有哪些？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-有哪些重要的角色">rabbitmq 有哪些重要的角色？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-有哪些重要的组件">rabbitmq 有哪些重要的组件？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-中-vhost-的作用是什么">rabbitmq 中 vhost 的作用是什么？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-的消息是怎么发送的">rabbitmq 的消息是怎么发送的？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-怎么保证消息的稳定性">rabbitmq 怎么保证消息的稳定性？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-怎么避免消息丢失">rabbitmq 怎么避免消息丢失？</h5>
+
+<hr>
+
+
+
+<h5 id="要保证消息持久化成功的条件有哪些">要保证消息持久化成功的条件有哪些？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-持久化有什么缺点">rabbitmq 持久化有什么缺点？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-有几种广播类型">rabbitmq 有几种广播类型？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-怎么实现延迟消息队列">rabbitmq 怎么实现延迟消息队列？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-集群有什么用">rabbitmq 集群有什么用？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-节点的类型有哪些">rabbitmq 节点的类型有哪些？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-集群搭建需要注意哪些问题">rabbitmq 集群搭建需要注意哪些问题？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-每个节点是其他节点的完整拷贝吗为什么">rabbitmq 每个节点是其他节点的完整拷贝吗？为什么？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-集群中唯一一个磁盘节点崩溃了会发生什么情况">rabbitmq 集群中唯一一个磁盘节点崩溃了会发生什么情况？</h5>
+
+<hr>
+
+
+
+<h5 id="rabbitmq-对集群节点停止顺序有要求吗">rabbitmq 对集群节点停止顺序有要求吗？</h5>
+
+<hr>
+
+
+
+<h5 id="kafka">Kafka</h5>
+
+<hr>
+
+<h5 id="kafka-可以脱离-zookeeper-单独使用吗为什么">kafka 可以脱离 zookeeper 单独使用吗？为什么？</h5>
+
+<p>不可以 </p>
+
+<hr>
+
+
+
+<h5 id="kafka-有几种数据保留的策略">kafka 有几种数据保留的策略？</h5>
+
+<p>kafka 同时设置了 7 天和 10G 清除数据，到第五天的时候消息达到了 10G，这个时候 kafka 将如何处理？ </p>
+
+<hr>
+
+<h5 id="什么情况会导致-kafka-运行变慢">什么情况会导致 kafka 运行变慢？</h5>
+
+<hr>
+
+
+
+<h5 id="使用-kafka-集群需要注意什么">使用 kafka 集群需要注意什么？</h5>
+
+<p>Zookeeper </p>
+
+<hr>
+
+<h5 id="zookeeper-是什么">zookeeper 是什么？</h5>
+
+<hr>
+
+
+
+<h5 id="zookeeper-都有哪些功能">zookeeper 都有哪些功能？</h5>
+
+<p>配置文件， </p>
+
+<p>分布式锁 </p>
+
+<p>集群配置 </p>
+
+<hr>
+
+<h5 id="zookeeper-有几种部署模式">zookeeper 有几种部署模式？</h5>
+
+<p>单机模式，集群模式，伪集群模式 </p>
+
+<hr>
+
+
+
+<h5 id="zookeeper-怎么保证主从节点的状态同步">zookeeper 怎么保证主从节点的状态同步？</h5>
+
+<hr>
+
+<h5 id="集群中为什么要有主节点">集群中为什么要有主节点？</h5>
+
+<p>在分布式环境中，有些业务逻辑只需要集群中的某一台机器进行执行， </p>
+
+<p>其他的机器可以共享这个结果，这样可以大大减少重复计算，提高性能，所以就需要主节点 </p>
+
+<p>集群中有 3 台服务器，其中一个节点宕机，这个时候 zookeeper 还可以使用吗？ </p>
+
+<p>可以继续使用，单数服务器只要没超过一半的服务器宕机就可以继续使用。 </p>
+
+<hr>
+
+<h5 id="说一下-zookeeper-的通知机制">说一下 zookeeper 的通知机制？</h5>
+
+<p>客户端端会对某个 znode 建立一个 watcher 事件， </p>
+
+<p>当该 znode 发生变化时，这些客户端会收到 zookeeper 的通知， </p>
+
+<p>然后客户端可以根据 znode 变化来做出业务上的改变。 </p>
+
+<hr>
+
+<h5 id="zookeeper-选举">Zookeeper 选举</h5>
+
+<p>目前有5台服务器，每台服务器均没有数据，它们的编号分别是1,2,3,4,5,按编号依次启动，它们的选择举过程如下： </p>
+
+<p>服务器1启动，给自己投票，然后发投票信息，由于其它机器还没有启动所以它收不到反馈信息，服务器1的状态一直属于Looking(选举状态)。 </p>
+
+<p>服务器2启动，给自己投票，同时与之前启动的服务器1交换结果，由于服务器2的编号大所以服务器2胜出，但此时投票数没有大于半数，所以两个服务器的状态依然是LOOKING。 </p>
+
+<p>服务器3启动，给自己投票，同时与之前启动的服务器1,2交换信息，由于服务器3的编号最大所以服务器3胜出，此时投票数正好大于半数，所以服务器3成为领导者，服务器1,2成为小弟。 </p>
+
+<p>服务器4启动，给自己投票，同时与之前启动的服务器1,2,3交换信息，尽管服务器4的编号大，但之前服务器3已经胜出，所以服务器4只能成为小弟。 </p>
+
+<p>服务器5启动，后面的逻辑同服务器4成为小弟。 </p>
+
+<p>MySql </p>
+
+<hr>
+
+<h5 id="数据库的三范式是什么">数据库的三范式是什么？</h5>
+
+<p>第一范式（1NF）：要求数据库表的每一列都是不可分割的原子数据项。 </p>
+
+<p>第二范式（2NF）：在1NF的基础上，非码属性必须完全依赖于候选码（在1NF基础上消除非主属性对主码的部分函数依赖） </p>
+
+<p>第二范式需要确保数据库表中的每一列都和主键相关，而不能只与主键的某一部分相关（主要针对联合主键而言）。 </p>
+
+<p>第三范式（3NF）：在2NF基础上，任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖） </p>
+
+<p>第三范式需要确保数据表中的每一列数据都和主键直接相关，而不能间接相关。 </p>
+
+<p>一张自增表里面总共有 7 条数据，删除了最后 2 条数据，重启 mysql 数据库，又插入了一条数据，此时 id 是几？ </p>
+
+<p>一般情况下，我们创建的表的类型是InnoDB，如果新增一条记录（不重启mysql的情况下），这条记录的id是8；但是如果重启（文中提到的）MySQL的话，这条记录的ID是6。因为InnoDB表只把自增主键的最大ID记录到内存中，所以重启数据库或者对表OPTIMIZE操作，都会使最大ID丢失。 </p>
+
+<p>但是，如果我们使用表的类型是MylSAM，那么这条记录的ID就是8。因为MylSAM表会把自增主键的最大ID记录到数据文件里面，重启MYSQL后，自增主键的最大ID也不会丢失。 </p>
+
+<hr>
+
+
+
+<h5 id="如何获取当前数据库版本">如何获取当前数据库版本？</h5>
+
+<p>select version(); </p>
+
+<hr>
+
+<h5 id="说一下-acid-是什么">说一下 ACID 是什么？</h5>
+
+<p>原子性(atomicity): 一个事物必须被视为一个不可分割的最小工作单元，整个事物中的操作要么全部提交成功，要么全部失败回滚，对于一个事物来说，不可能只执行其中的一部分操作，这就是的原子性。 一致性(consistency): 数据库总是从一个一致性的状态转到另一个事务的一致性状态。 由于事物的一致性，所以如果这时候执行完第三系统突然奔溃，支票账户也不会损失100，因为事物还没提交eg: 1 start transaction ; 2 select * from checking where id=1; 3 update checking set balance=balance-100 where id=1; 4 update savings set balance=balance+100 where id=1; 5 commit; 隔离性(isolation):一个事物所做的修改在最终提交前，对其他事物是不可见的。在前面的例子中，如果执行到第3，此时有另一个账户汇款，则其看见的支票账户得余额并没有被减去100。 持久性(durability): 一旦事物提交，则其所做的修改就会永远保存在数据库中。 </p>
+
+<hr>
+
+<h5 id="char-和-varchar-的区别是什么">char 和 varchar 的区别是什么？</h5>
+
+<p>首先明确的是，char的长度是不可变的，而varchar的长度是可变的， </p>
+
+<p>定义一个char[10]和varchar[10],如果存进去的是‘abcd’,那么char所占的长度依然为10，除了字符‘abcd’外，后面跟六个空格，而varchar就立马把长度变为4了，取数据的时候，char类型的要用trim()去掉多余的空格，而varchar是不需要的， </p>
+
+<p>char的存取数度还是要比varchar要快得多，因为其长度固定，方便程序的存储与查找；但是char也为此付出的是空间的代价，因为其长度固定，所以难免会有多余的空格占位符占据空间，可谓是以空间换取时间效率，而varchar是以空间效率为首位的。 </p>
+
+<p>char的存储方式是，对英文字符（ASCII）占用1个字节，对一个汉字占用两个字节；而varchar的存储方式是，对每个英文字符占用2个字节，汉字也占用2个字节，两者的存储数据都非unicode的字符数据。 </p>
+
+<hr>
+
+<h5 id="float-和-double-的区别是什么">float 和 double 的区别是什么？</h5>
+
+<p>float：占4个字节  <br>
+double： 占8个字节  <br>
+double 和 float 的区别是double精度高，有效数字16位，float精度7位（可提供7位或8位有效数字，构成包括符号位、指数位和尾数位）。  <br>
+但double消耗内存是float的两倍，double的运算速度比float慢得多，能用单精度时不要用双精度。 </p>
+
+<hr>
+
+
+
+<h5 id="mysql-的内连接左连接右连接有什么区别">mysql 的内连接、左连接、右连接有什么区别？</h5>
+
+<p>mysql 索引是怎么实现的？ </p>
+
+<p>索引是一种高效获取数据的存储结构 </p>
+
+<p>(1)找到name索引树 </p>
+
+<p>　　　　(2)根据name的值找到该树下叶子的name索引和主键值 </p>
+
+<p>　　　　(3)用主键值去主键索引树去叶子节点到该条数据信息 </p>
+
+<hr>
+
+<h5 id="怎么验证-mysql-的索引是否满足需求">怎么验证 mysql 的索引是否满足需求？</h5>
+
+<hr>
+
+
+
+<h5 id="说一下数据库的事务隔离">说一下数据库的事务隔离？</h5>
+
+<hr>
+
+
+
+<h5 id="说一下-mysql-常用的引擎">说一下 mysql 常用的引擎？</h5>
+
+<p>MyISAM引擎和InnoDB引擎的区别  <br>
+　　MyISAM：支持全文索引;不支持事务;它是表级锁;会保存表的具体行数.  <br>
+　　InnoDB：5.6以后才有全文索引;支持事务；它是行级锁;不会保存表的具体行数.  <br>
+　　一般：不用事务的时候,count计算多的时候适合myisam引擎。对可靠性要求高就是用innodby引擎。推荐用InnoDB引擎. </p>
+
+<p>　　加了索引之后能够大幅度的提高查询速度，但是索引也不是越多越好，一方面它会占用存储空间，另一方面它会使得写操作变得很慢。通常我们对查询次数比较频繁，值比较多的列才建索引。  <br>
+　　例如：select * from user where sex = “女”， 这个就不需要建立索引，因为性别一共就两个值，查询本身就是比较快的。  <br>
+　　　　　select * from user where user_id = 1995 ,这个就需要建立索引，因为user_id的值是非常多的。 </p>
+
+<hr>
+
+<h5 id="说一下-mysql-的行锁和表锁">说一下 mysql 的行锁和表锁？</h5>
+
+<hr>
+
+
+
+<h5 id="说一下乐观锁和悲观锁">说一下乐观锁和悲观锁？</h5>
+
+<hr>
+
+
+
+<h5 id="mysql-问题排查都有哪些手段">mysql 问题排查都有哪些手段？</h5>
+
+<hr>
+
+
+
+<h5 id="如何做-mysql-的性能优化">如何做 mysql 的性能优化？</h5>
+
+<hr>
+
+
+
+<h5 id="redis">Redis</h5>
+
+<hr>
+
+
+
+<h5 id="redis-是什么都有哪些使用场景">redis 是什么？都有哪些使用场景？</h5>
+
+<hr>
+
+
+
+<h5 id="redis-有哪些功能">redis 有哪些功能？</h5>
+
+<hr>
+
+
+
+<h5 id="redis-和-memecache-有什么区别">redis 和 memecache 有什么区别？</h5>
+
+<hr>
+
+
+
+<h5 id="redis-为什么是单线程的">redis 为什么是单线程的？</h5>
+
+<hr>
+
+
+
+<h5 id="什么是缓存穿透怎么解决">什么是缓存穿透？怎么解决？</h5>
+
+<hr>
+
+
+
+<h5 id="redis-支持的数据类型有哪些">redis 支持的数据类型有哪些？</h5>
+
+<hr>
+
+
+
+<h5 id="redis-支持的-java-客户端都有哪些">redis 支持的 java 客户端都有哪些？</h5>
+
+<hr>
+
+
+
+<h5 id="jedis-和-redisson-有哪些区别">jedis 和 redisson 有哪些区别？</h5>
+
+<hr>
+
+
+
+<h5 id="怎么保证缓存和数据库数据的一致性">怎么保证缓存和数据库数据的一致性？</h5>
+
+<hr>
+
+
+
+<h5 id="redis-持久化有几种方式">redis 持久化有几种方式？</h5>
+
+<hr>
+
+
+
+<h5 id="redis-怎么实现分布式锁">redis 怎么实现分布式锁？</h5>
+
+<hr>
+
+<h5 id="redis-分布式锁有什么缺陷">redis 分布式锁有什么缺陷？</h5>
+
+<hr>
+
+<h5 id="redis-如何做内存优化">redis 如何做内存优化？</h5>
+
+<hr>
+
+
+
+<h5 id="redis-淘汰策略有哪些">redis 淘汰策略有哪些？</h5>
+
+<hr>
+
+<h5 id="redis-常见的性能问题有哪些该如何解决">redis 常见的性能问题有哪些？该如何解决？</h5>
+
+<hr>
+
+<h5 id="jvm">JVM</h5>
+
+<hr>
+
+<h5 id="说一下-jvm-的主要组成部分及其作用">说一下 jvm 的主要组成部分？及其作用？</h5>
+
+<hr>
+
+
+
+<h5 id="说一下-jvm-运行时数据区">说一下 jvm 运行时数据区？</h5>
+
+<hr>
+
+<h5 id="说一下堆栈的区别">说一下堆栈的区别？</h5>
+
+<hr>
+
+<h5 id="队列和栈是什么有什么区别">队列和栈是什么？有什么区别？</h5>
+
+<hr>
+
+<h5 id="什么是双亲委派模型">什么是双亲委派模型？</h5>
+
+<hr>
+
+<h5 id="说一下类加载的执行过程">说一下类加载的执行过程？</h5>
+
+<hr>
+
+<h5 id="怎么判断对象是否可以被回收">怎么判断对象是否可以被回收？</h5>
+
+<hr>
+
+<h5 id="java-中都有哪些引用类型">java 中都有哪些引用类型？</h5>
+
+<hr>
+
+<h5 id="说一下-jvm-有哪些垃圾回收算法">说一下 jvm 有哪些垃圾回收算法？</h5>
+
+<hr>
+
+<h5 id="说一下-jvm-有哪些垃圾回收器">说一下 jvm 有哪些垃圾回收器？</h5>
+
+<hr>
+
+
+
+<h5 id="详细介绍一下-cms-垃圾回收器">详细介绍一下 CMS 垃圾回收器？</h5>
+
+<hr>
+
+<h5 id="新生代垃圾回收器和老生代垃圾回收器都有哪些有什么区别">新生代垃圾回收器和老生代垃圾回收器都有哪些？有什么区别？</h5>
+
+<hr>
+
+<h5 id="简述分代垃圾回收器是怎么工作的">简述分代垃圾回收器是怎么工作的？</h5>
+
+<hr>
+
+<h5 id="说一下-jvm-调优的工具">说一下 jvm 调优的工具？</h5>
+
+<hr>
+
+<h5 id="常用的-jvm-调优的参数都有哪些">常用的 jvm 调优的参数都有哪些？</h5>
+
+<p>其他问题 </p>
+
+<hr>
+
+<h5 id="dubbo">Dubbo</h5>
+
+<p>是Alibaba开源的分布式服务框架，它最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或者最大限度地松耦合）。从服务模型的角度来看，      Dubbo采用的是一种非常简单的模型，要么是提供方提供服务，要么是消费方消费服务，所以基于这一点可以抽象出服务提供方（Provider）和服务消费方（Consumer）两个角色。关于注册中心、协议支持、服务监控等内容，详见后面描述。 </p>
+
+<hr>
+
+
+
+<h5 id="mq使用场景">mq使用场景</h5>
+
+<p>解偶 ，数据发送出去之后不管谁去调用，也不管他调用成功了没有 </p>
+
+<p>异步 ，如请求量大需要落数据库，可以吧数据放到mq中，然后在直接返回结果 </p>
+
+<p>削峰 ，如果在某个时间点数据量大，可以吧数据哭放入到mq中，然后其他系统在书通过mq拿到数据落库 </p>
+
+<p>解决mq挂掉的情况，开启镜像模式 </p>
+
+<hr>
+
+<h5 id="redis-1">redis</h5>
+
+<p>一个项目中20%的数据属于常用数据，可以选择把它放入到redis 缓存中 </p>
+
+<p>缓存击穿，就是说某个 key 非常热点，访问非常频繁，处于集中式高并发访问的情况，当这个 key 在失效的瞬间，大量的请求就击穿了缓存，直接请求数据库，就像是在一道屏障上凿开了一个洞-过期时间加上随机数，避免全部同时过期 </p>
+
+<p>缓存穿透，缓存中没有，数据库也没有，一直查询，增加数据库压力，如果数据中是空的，则吧此数据的id存到redis 中设置过期时间 </p>
+
+<p>缓存雪崩，redis  挂掉了，所有请求到了数据库中，直接吧mysql 弄挂了，限流，持久化 </p>
+
+<p>持久化方式：rdb默认/aof </p>
+
+<p>架构模式： </p>
+
+<p>单机版，内存有限，处理能力有限，无法高可用 </p>
+
+<p>主从复制，主服务器同步数据到从服务器，保证数据一直降低主服务器的读的压力，没法降低写的压力 </p>
+
+<p>哨兵，当一个主服务器不能正常使用，会自动进行一次自动迁移，高可用，没法降低主服务器的写的压力 </p>
+
+<p>数据结构： </p>
+
+<p>String 字符串 最大512M </p>
+
+<p>Hash 哈希 </p>
+
+<p>列表 </p>
+
+<p>有序集合 </p>
+
+<p>集合 </p>
+
+<hr>
+
+
+
+<h5 id="dubbo-1">dubbo</h5>
+
+<p>工作原理 </p>
+
+<p>接口层，给服务提供者和消费者来实现 </p>
+
+<p>config 主要对dubbo配置文件 </p>
+
+<p>代理层，无论是消费者还是提供者，都会生成代理，代理之间进行通讯 </p>
+
+<p>服务注册层，负责服务注册与发现 </p>
+
+<p>集群层，封装多个服务提供者的路由几以及负载均衡 </p>
+
+<p>监控层，对rpc接口的调用次数和调用时间进行监控 </p>
+
+<p>远程调用层远层调用，封装rpc 调用 </p>
+
+<p>交换层封装请求响应模式，同步转换初始 </p>
+
+<p>网络传输层 </p>
+
+<p>序列化层 </p>
+
+<p>第一步：提供商向注册中心去注册 </p>
+
+<p>第二步：消费者从注册中心订阅服务，注册中心会通知消费者注册好的服务 </p>
+
+<p>第三步：消费者参与提供者 </p>
+
+<p>第四步：消费者和供应商 </p>
+
+<hr>
+
+<h5 id="加密算法">加密算法</h5>
+
+<p>对称加密算法：DES  3DES AES 加密解密使用相同的算法 </p>
+
+<hr>
+
+
+
+<h5 id="非对称算法rsadsa">非对称算法：RSA，DSA</h5>
+
+<hr>
+
+
+
+<h5 id="散列算法md5sha-1">散列算法：MD5，SHA-1</h5>
+
+<hr>
+
+
+
+<h5 id="sql优化">sql优化</h5>
+
+<p>优化： </p>
+
+<p>查看执行计划 </p>
+
+<p>查询一条数据使用limit 1 ，查询到数据不在继续查询 </p>
+
+<p>根据业务为字段简历索引 </p>
+
+<p>避免使用 * </p>
+
+<p>不走索引的情况 </p>
+
+<p>索引列不使用函数 </p>
+
+<p>char 用数字查询不走索引 </p>
+
+<p>like 不使用% </p>
+
+<p>组合索引顺序打乱 </p>
+
+<p>MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被锁起来，而别的进程，就算是读进程都无法操作直到读操作完成。另外，MyISAM 对于 SELECT COUNT(*) 这类的计算是超快无比的。 InnoDB 的趋势会是一个非常复杂的存储引擎，对于一些小的应用，它会比 MyISAM 还慢。他是它支持“行锁” ，于是在写操作比较多的时候，会更优秀。并且，他还支持更多的高级应用 </p>
+
+<hr>
+
+<h5 id="zookeeper">Zookeeper</h5>
+
+<p>持久节点客户端断开，节点存在 </p>
+
+<p>持久顺序节点，创建节点给节点编号 </p>
+
+<p>临时节点，如果当客户端雨zookeeper 断开临时结点失效 </p>
+
+<p>临时顺序节点 </p>
+
+<p>分布式锁： </p>
+
+<p>客户端1 创建临时顺序节点 </p>
+
+<p>客户端2 创建临时顺序结点，如果发现，自己不是最小，则向前面的几点注册监听 </p>
+
+<p>如果客户端1 处理完或者是服务器挂掉，则释放临时借点1 ，这是客户端而获取到分布式锁 </p>
+
+<p>springboot </p>
+
+<p>简化了繁重的配置提供了各种容器 </p>
+
+<p>配置中心appli cation </p>
+
+<p>核心注解：SpringbootCOnfigguration实现配置文件功能，endab leautoconfigguration打开自动配置功能，componentsacn组建扫妙， </p>
+
+<hr>
+
+<h5 id="内置容器tomcatj-etty">内置容器tomcat/j etty</h5>
+
+<hr>
+
+<h5 id="分布式事务">分布式事务</h5>
+
+<hr>
+
+<h5 id="mysql优化">mysql优化</h5>
+
+<hr>
+
+
+
+<h5 id="mysql锁">mysql锁</h5>
+
+<hr>
+
+<h5 id="vue">vue</h5>
+
+<blockquote>
+  <p>感谢您的阅读 <br>
+  作者: MR <br>
+  2020年 04月 12日    </p>
+</blockquote></div></body></html>
